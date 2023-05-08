@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "banner": {
+      "type": "image-banner-2",
+      "settings": {
+        "title-xl": "FAQ"
+      }
+    },
+    "privacy-policy": {
+      "type": "template-privacy-policy",
+      "settings": {
+      }
+    },
+    "social-networks": {
+      "type": "social-networks",
+      "settings": {
+        "social-networks": "social-networks"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "privacy-policy",
+    "social-networks"
+  ]
+}

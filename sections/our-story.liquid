@@ -1,0 +1,48 @@
+{{ 'our-story.css' | asset_url | stylesheet_tag }}
+<div class="story">
+    <div class="story__container">
+        <div class="story__inner">
+            <div class="story__text">
+                <h2 class="story__title main__title">{{ section.settings.title }}</h2>
+                <p>{{ section.settings.subtitle }}</p>
+                <a href="{{ section.settings.button-link }}">{{ section.settings.button-label }}</a>
+            </div>
+        </div>
+    </div>
+</div> 
+ 
+{% schema %}
+    {
+        "name": "Story section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Our story"
+            },
+            {
+                "type": "textarea",
+                "id": "subtitle",
+                "label": "Subtitle",
+                "default": "Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us."
+            },
+            {
+                "type": "text",
+                "id": "button-label",
+                "label": "Button label",
+                "default": "read OUR story"
+            },
+            {
+                "type": "url",
+                "id": "button-link",
+                "label": "Button url"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Story section"
+            }
+        ]
+    }
+{% endschema %}

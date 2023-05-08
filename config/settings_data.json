@@ -1,0 +1,34 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu",
+          "menu-mobile": "main-menu",
+          "policies": "policies",
+          "logo": "shopify:\/\/shop_images\/FSC_Vector_RWA.png",
+          "logo-mobile": "shopify:\/\/shop_images\/FSC_Vector_RWA.png",
+          "ml-height": 60
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "about-us-text": "Fucking Strong Coffee is a specialty coffee brand from the folks behind Good Beans - a beloved bean shop tucked amongst the canals of Amsterdam - who are on a mission to make fancy coffee more approachable. Our beans are ethically-sourced from independent producers and roasted fresh in small batches. Drop us a line or drop by if you’re in town.",
+          "bottom-text": "",
+          "menu-footer": "footer-menu",
+          "policies": "",
+          "insta-link": "https:\/\/www.instagram.com\/fckingstrongcoffee"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<header class="header">
+    <div class="container">
+        <div class="row header__row">
+            <div class="header__navigation">
+                <nav>
+                    {% for link in section.settings.menu.links %}
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
+                </nav>
+            </div>
+            <div class="header__logo">
+                <a href="/" class="header__logo-inner header__logo-inner-desc">
+                    {% if section.settings.logo != blank %}
+                        {{ section.settings.logo | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {{ 'header-logo.svg' | asset_url | img_tag }}
+                    {% endif %}
+                </a>
+            </div>
+            <div class="header__cart">
+                {% include 'gtranslate' %}
+                <a href="/cart" class="header__cart-button">
+                    {{ 'cart-button-icon.svg' | asset_url | img_tag }}
+                    <span class="headerCartLabel">
+                        {{ cart.item_count }}
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="header__row-mobile">
+            <div class="header-mobile__menu">
+                <div class="side-menu-button" >
+                    {% render 'side-menu-button-icon' %}
+                </div>
+                <div class="side-menu-active-button side-menu-button-hidden" >
+                    {% render 'mobile-side-menu-active-button-icon' %}
+                </div>
+            </div>
+            <div class="header-mobile__logo">
+                {%- if section.settings.logo-mobile != blank -%}
+                    <a href="/" loading="lazy" >
+                        {{ section.settings.logo-mobile | image_url: height: section.settings.ml-height | image_tag }}
+                    </a>
+                {%- else -%}
+                <a href="/" class="header__logo-inner header__logo-inner-mob" loading="lazy" >
+                    {{ 'header-logo-mobile.svg' | asset_url | img_tag }}
+                    {{ 'header-logo-mobile-white.svg' | asset_url | img_tag }}
+                </a>
+                {%- endif -%}
+            </div>
+            <div class="header-mobile__cart">
+                <a href="/cart">
+                    <span>{{ cart.total_price | money }}</span>
+                    <span>({{ cart.item_count }})</span>
+                    {% render 'cart-button-icon' %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="popup-mobile">
+        <nav class="popup-mobile__inner">
+            <div class="popup-mobile__nav-top">
+                {% for link in section.settings.menu-mobile.links %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                {% endfor %}
+            </div>
+
+            <div class="popup-mobile__nav-bottom">
+                {% for link in section.settings.policies.links %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                {% endfor %}
+                <div class="popup-mobile__lang-switch">
+                    <div class="gtranslate_wrapper gt_container--3jzdam"></div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+{% schema %}
+    {
+        "name": "Header",
+        "settings": [
+            {
+                "type": "link_list",
+                "id": "menu",
+                "default": "main-menu",
+                "label": "Heading Navgation Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "menu-mobile",
+                "label": "Mobile Navgation Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "policies",
+                "label": "Mobile Bottom Menu"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Store Logo Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo-mobile",
+                "label": "Store Logo mobile"
+            },
+            {
+                "type": "range",
+                "id": "ml-height",
+                "min": 50,
+                "max": 150,
+                "step": 1,
+                "unit": "px",
+                "label": "Mobile logo height",
+                "default": 60
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,303 @@
+{{ 'about-us.css' | asset_url | stylesheet_tag }}
+<div class="about">
+    <div class="container">
+        <div class="about__block">
+            <div class="about__block-text">
+                <h2 class="about__block-title about-title">{{ section.settings.title-1 }}</h2>
+                {% if section.settings.description-1 != blank %}
+                    {{ section.settings.description-1 }}
+                {% else %}
+                    <p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.</p>
+                    <p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.</p>
+                {% endif %}
+               </div>
+            <div class="about__block-image">
+                <div class="about__block-image-bg">
+                    {% if section.settings.img-1 %}
+                        {{ section.settings.img-1 | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {{ 'about-us-icon.png' | asset_url | img_tag }}
+                    {% endif %}
+                    <div>
+                        {% unless section.settings.img-patch-1 %}
+                            {{ 'patch-icon.png' | asset_url | img_tag }}
+                        {% endunless %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__block about__block-reverse">
+            <div class="about__block-text">
+                <h2 class="about__block-title about-title">{{ section.settings.title-2 }}</h2>
+                {% if section.settings.description-2 != blank %}
+                    {{ section.settings.description-2 }}
+                {% else %}
+                    <p>Our little shop is tucked just a bean’s throw away from the bustle of the Haarlemmerstraat, just north of the Jordaan. Good Beans is part-cafe, part-specialty bean shop, part-local art space, and part-living room, all packed into the ground floor of a cozy, old Amsterdam townhouse. Our door is open to any and all smiling faces and curious passers-by.</p>
+                    <p>Given the current circumstances, our little nook of cozy couch conversations has turned into a takeaway window. We have Fucking Strong Coffee running on our La Marzocco workhorse machine all day, in addition to organic chai, locally-blended tea, hot cocoa, and ginger beer. We showcase three or four Dutch micro-roasters at a time, with a rotating medley of fresh filter and espresso beans powering our growing group of home brewers who depend on us for the good stuff.</p>
+                {% endif %}
+            </div>
+            <div class="about__block-image">
+                <div class="about__block-image-bg">
+                    {% if section.settings.img-2 %}
+                        {{ section.settings.img-2 | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {{ 'about-us-icon.png' | asset_url | img_tag }}
+                    {% endif %}
+                    <div>
+                        {% unless section.settings.img-patch-2 %}
+                            {{ 'patch-icon.png' | asset_url | img_tag }}
+                        {% endunless %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__block">
+            <div class="about__block-text">
+                <h2 class="about__block-title about-title">{{ section.settings.title-3 }}</h2>
+                {% if section.settings.description-3 != blank %}
+                    {{ section.settings.description-3 }}
+                {% else %}
+                    <p>We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community, or society of a particular place.</p>
+                    <p>We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community, or society of a particular place.</p>
+                {% endif %}
+               </div>
+            <div class="about__block-image">
+                <div class="about__block-image-bg">
+                    {% if section.settings.img-3 %}
+                        {{ section.settings.img-3 | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {{ 'about-us-icon.png' | asset_url | img_tag }}
+                    {% endif %}
+                    <div>
+                        {% unless section.settings.img-patch-3 %}
+                            {{ 'patch-icon.png' | asset_url | img_tag }}
+                        {% endunless %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__block about__block-reverse">
+            <div class="about__block-text">
+                <h2 class="about__block-title about-title">{{ section.settings.title-4 }}</h2>
+                {% if section.settings.description-4 != blank %}
+                    {{ section.settings.description-4 }}
+                {% else %}
+                    <p>When we started out as a specialty bean shop, we quickly noticed just how much plastic waste is generated by conventional coffee packaging. Every month, we were buying and selling dozens of single-use, difficult to recycle bags.</p>
+                    <p>Those same bags of coffee likely ended up in landfills or incinerators after their contents were brewed. Instead of adding to the problem, we found that cans offered a unique alternative. They are not only easier to recycle with other aluminum, but they’re sturdy and reusable. That means most of our cans live several lives as storage containers, bookshelf accessories, and cactus pots. Long live the can!</p>
+                {% endif %}
+               </div>
+            <div class="about__block-image">
+                <div class="about__block-image-bg">
+                    {% if section.settings.img-4 %}
+                        {{ section.settings.img-4 | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {{ 'about-us-icon.png' | asset_url | img_tag }}
+                    {% endif %}
+                    <div>
+                        {% unless section.settings.img-patch-4 %}
+                            {{ 'patch-icon.png' | asset_url | img_tag }}
+                        {% endunless %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about__big-image">
+        <div class="about__big-image-inner">
+            {% if section.settings.big-image %}
+                {{ section.settings.big-image | img_url: 'master' | img_tag }}
+            {% else %}
+                {{ 'about-big-image.png' | asset_url | img_tag }}
+            {% endif %}
+            {% unless section.settings.img-patch-5 %}
+                 <div class="big-image-patch-1">
+                    {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                </div>
+                <div class="big-image-patch-2">
+                    {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                </div>
+            {% endunless %}
+        </div>
+        <h6 class="about__big-image-title">{{ section.settings.big-image-subtitle }}</h6>
+    </div>
+    <div class="container">
+        <div class="producers">
+            <h2 class="producers__title about-title">Our producers</h2>
+            <div class="producers__blocks">
+                {% for block in section.blocks %}
+                    <div class="producers__block">
+                        <div class="producers__block-inner">
+                            <div class="producers__img">
+                                {% if block.settings.producer-image %}
+                                    {{ block.settings.producer-image | img_url: 'master' | img_tag }}
+                                {% else %}
+                                    {{ 'about-us-producers-icon.png' | asset_url | img_tag }}
+                                {% endif %}
+                            </div>
+                            <h4 class="producers__block-title">{{ block.settings.producer-title }}</h4>
+                            <p>{{ block.settings.producer-subtitle }}</p>
+                            <a href="{{ block.settings.producer-url }}">{{ block.settings.producer-btn }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% render 'scroll-down' %}
+
+{% schema %}
+    {
+        "name": "About-us",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title-1",
+                "default": "WHERE IT STARTED",
+                "label": "1st title text"
+            },
+            {
+                "type": "richtext",
+                "id": "description-1",
+                "label": "1st title description"
+            },
+            {
+                "type": "image_picker",
+                "id": "img-1",
+                "label": "1st image"
+            },
+            {
+                "type": "checkbox",
+                "id": "img-patch-1",
+                "label": "Hide 1st image scarp booky patch",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "title-2",
+                "default": "The story of our store",
+                "label": "2nd title text"
+            },
+            {
+                "type": "richtext",
+                "id": "description-2",
+                "label": "2nd title description"
+            },
+            {
+                "type": "image_picker",
+                "id": "img-2",
+                "label": "2nd image"
+            },
+            {
+                "type": "checkbox",
+                "id": "img-patch-2",
+                "label": "Hide 2nd image scarp booky patch",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "title-3",
+                "default": "The trip to Rwanda",
+                "label": "3d title text"
+            },
+            {
+                "type": "richtext",
+                "id": "description-3",
+                "label": "3d title description"
+            },
+            {
+                "type": "image_picker",
+                "id": "img-3",
+                "label": "3th image"
+            },
+            {
+                "type": "checkbox",
+                "id": "img-patch-3",
+                "label": "Hide 3th image scarp booky patch",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "title-4",
+                "default": "Yes we can!",
+                "label": "4th title text"
+            },
+            {
+                "type": "richtext",
+                "id": "description-4",
+                "label": "4th title description"
+            },
+            {
+                "type": "image_picker",
+                "id": "img-4",
+                "label": "4th image"
+            },
+            {
+                "type": "checkbox",
+                "id": "img-patch-4",
+                "label": "Hide 4th image scarp booky patch",
+                "default": false
+            },
+            {
+                "type": "image_picker",
+                "id": "big-image",
+                "label": "Big mage"
+            },
+            {
+                "type": "text",
+                "id": "big-image-subtitle",
+                "label": "Big image subtitle",
+                "default": "Cody in Amsterdam with our first cans, August 2019"
+            },
+            {
+                "type": "checkbox",
+                "id": "img-patch-5",
+                "label": "Hide big image scarp booky patches",
+                "default": false
+            }   
+        ],
+        "max_blocks": 3,
+        "blocks": [
+            {
+                "name": "Producer block",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "producer-image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "producer-title",
+                        "label": "Title",
+                        "default": "Simon Albers"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "producer-subtitle",
+                        "label": "Subitle",
+                        "default": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community."
+                    },
+                    {
+                        "type": "text",
+                        "id": "producer-btn",
+                        "label": "Button label",
+                        "default": "Go to Simon’s coffee"
+                    },
+                    {
+                        "type": "url",
+                        "id": "producer-url",
+                        "label": "Button url"
+                    },
+                    {
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "A collection that will open when you click on the button"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

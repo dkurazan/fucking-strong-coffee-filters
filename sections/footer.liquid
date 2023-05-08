@@ -1,0 +1,97 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+<div class="container">
+    <div class="row footer__row">
+        <div>
+            <nav class="footer__col footer__nav">
+                <h3 class="footer__title">Menu</h3>
+                <ul>
+                    {% for link in section.settings.menu-footer.links %}
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <nav class="footer__col footer__nav">
+                <h3 class="footer__title">Policies</h3>
+                <ul>
+                    {% for link in section.settings.policies.links %}
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <div class="footer__col footer__about">
+                <h3 class="footer__title">About us</h3>
+                <p>{{ section.settings.about-us-text }}</p>
+            </div>
+            <div class="footer__col footer__newsletter">
+                <h3 class="footer__title">Newsletter</h3>
+                <p>Enter your email address below to join our mailing list and have our latest news and member-only deals delivered straight to your inbox.</p>
+                
+                {%- assign formId = 'Contact_' | append: section.id -%}
+                {% form 'customer', id: formId, novalidate: 'novalidate' %}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <input 
+                    type="email"
+                        name="contact[email]"
+                        id="{{ formId }}-email"
+                        class="input-group__field{% if form.errors %} input--error{% endif %}"
+                        value="{{ form.email }}"
+                        placeholder="Your mail"
+                        aria-required="true"
+                        autocorrect="off"
+                        autocapitalize="off">
+                    <button type="submit" name="commit" >Subscribe</button>
+                {% endform %}
+            </div>
+        </div>
+    </div>
+    {%- if section.settings.insta-link != blank -%}
+        <div class="row footer__row insta-row">
+            <a target="_blank" class="insta-link" href={{ section.settings.insta-link }} style="background: url({{ 'instagram-color.png' | asset_url }})"></a>
+        </div>
+    {%- endif -%}
+    {%- if section.settings.bottom-text != blank -%}
+        <div class="row footer__row">
+            <h6>{{ section.settings.bottom-text }}</h6>
+        </div>
+    {%- endif -%}
+    
+</div>
+
+{% schema %}
+    {
+        "name": "Footer",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "about-us-text",
+                "label": "About us text",
+                "default": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null."
+            },
+            {
+                "type": "textarea",
+                "id": "bottom-text",
+                "label": "Bottom text",
+                "default": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null."
+            },
+            {
+                "type": "link_list",
+                "id": "menu-footer",
+                "label": "Footer Menu",
+                "default": "main-menu"
+            },
+            {
+                "type": "link_list",
+                "id": "policies",
+                "label": "Policies Menu",
+                "default": "main-menu"
+            },
+            {
+                "type": "url",
+                "id": "insta-link",
+                "label": "Instagram Link"
+            }
+        ]
+    }
+{% endschema %}

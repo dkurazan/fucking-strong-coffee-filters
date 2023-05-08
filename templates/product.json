@@ -1,0 +1,69 @@
+{
+  "wrapper": ".product-template-page",
+  "sections": {
+    "template-product": {
+      "type": "template-product",
+      "blocks": {
+        "c7d40584-72c9-44f7-aad3-3d8764633257": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mountains_1.png",
+            "title": "ORIGIN"
+          }
+        },
+        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
+            "title": "BREW STYLE"
+          }
+        },
+        "afdaf59a-e72f-4031-8204-a5b99215695f": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mountains_1.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "30024cbf-a4b9-45f6-ae57-33e98ec2d594": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tasty_1.png",
+            "title": "TASTING NOTES"
+          }
+        }
+      },
+      "block_order": [
+        "c7d40584-72c9-44f7-aad3-3d8764633257",
+        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122",
+        "afdaf59a-e72f-4031-8204-a5b99215695f",
+        "30024cbf-a4b9-45f6-ae57-33e98ec2d594"
+      ],
+      "settings": {
+        "tab-title-1": "The coffee",
+        "tab-text-1": "<p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist branding and snobby attitudes have slowed our spread. New-age coffee bars and monotonous design snarkily whisper the same thing: good coffee is for the few. Our polite response? Fuck that. Inspired by our first origin partners at the female-run Twongerekawa Coko Cooperative Society in the rolling hills of Rwanda, we're determined to share our beans and their story with anyone and everyone who likes good products made by good people.<br\/><br\/><strong>You can be a coffee nerd or novice and still agree on one thing: the grooviest of days starts with a Fucking Strong Coffee.<\/strong><\/p>",
+        "tab-title-2": "the producer",
+        "tab-2-img-1": "shopify:\/\/shop_images\/Rectangle_7.png",
+        "tab-2-title-1": "the producer",
+        "tab-2-text-1": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br\/>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+        "map-title": "THIS IS WHERE I WORK",
+        "tab-title-3": "The brand",
+        "tab-text-3": "<p><strong>An American and a Norwegian walk into a coffee bar...<\/strong><\/p><p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us:<br\/><br\/><strong>Cody Reid-Dodick<\/strong><\/p><p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities.<br\/><br\/><strong>Harald Stangeland<\/strong><\/p><p>The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.<\/p>",
+        "scarp-booky": false
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "bestsellers",
+        "title": "our friends also like...",
+        "number_of_products_to_show": 3
+      }
+    }
+  },
+  "order": [
+    "template-product",
+    "featured-collection"
+  ]
+}

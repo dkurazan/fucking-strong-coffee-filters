@@ -1,0 +1,71 @@
+{{ 'privacy-policy.css' | asset_url | stylesheet_tag }}
+
+<div class="privacy">
+    <div class="privacy__inner">
+        <h1 class="privacy__title">{{ section.settings.title-xl }}</h1>
+        <div class="privacy__block">
+            <h3 class="privacy__block-title">{{ section.settings.title-sm-1 }}</h3>
+            <div>
+                {% if section.settings.text-1 != blank %}
+                    {{ section.settings.text-1 }}
+                {% else %}
+                    <p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.</p>
+                    <p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.</p>
+                    <p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.</p>
+                    <p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="privacy__block">
+            <h3 class="privacy__block-title">{{ section.settings.title-sm-2 }}</h3>
+            <div>
+                {% if section.settings.text-2 != blank %}
+                    {{ section.settings.text-2 }}
+                {% else %}
+                    <p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.</p>
+                    <p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.</p>
+                    <p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.</p>
+                    <p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% render 'scroll-down' %}
+
+{% schema %}
+    {
+        "name": "Policy",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title-xl",
+                "label": "Big title",
+                "default": "Lorem ipsum"
+            },
+            {
+                "type": "text",
+                "id": "title-sm-1",
+                "label": "1st small title",
+                "default": "Lorem ipsum"
+            },
+            {
+                "type": "richtext",
+                "id": "text-1",
+                "label": "1st block text"
+            },
+            {
+                "type": "text",
+                "id": "title-sm-2",
+                "label": "2nd small title",
+                "default": "Lorem ipsum"
+            },
+            {
+                "type": "richtext",
+                "id": "text-2",
+                "label": "2nd block text"
+            }
+        ]
+    }
+{% endschema %}

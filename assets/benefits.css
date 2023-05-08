@@ -1,0 +1,139 @@
+.benefits{
+    padding: 58.58px 0 54px;
+}
+
+.benefits__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits__title{
+    margin-bottom: 32px;
+}
+
+.benefits__items{
+    display: flex;
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 58px;
+    justify-content: space-around;
+}
+
+.benefits__item{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits__item img{
+    max-width: 60px;
+    width: 100%;
+    max-height: 60px;
+    margin-bottom: 24px;
+}
+
+.benefits__item-title{
+    margin-bottom: 24px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    color: #333333;
+}
+
+.benefits__item-subtitle{
+    text-align: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 302px;
+}
+
+.benefits__button{
+    display: block;
+    padding: 21px 131.5px;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #EB2240;
+    text-decoration: none;
+    border: 1px solid #EB2240;
+    transition: .5s all ease-in-out;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.benefits__button:hover {
+    background-color: #fff;
+    color: #EB2240;
+    transition: .5s all ease-in-out;
+}
+
+
+@media(max-width: 1200px){
+    .benefits__items{
+        gap: 15px;
+    }
+}
+
+@media(max-width: 1200px){
+    .benefits__inner{
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 600px){
+
+    .benefits__items{
+        flex-wrap: wrap;
+    }
+
+    .benefits__item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .benefits{
+        padding-top: 30px;
+    }
+
+    .benefits__title{
+        line-height: 87%;
+    }
+}
+
+@media(max-width: 420px){
+    .benefits__inner{
+        padding: 0 20px;
+    }
+
+    .benefits__button{
+        width: auto;
+        margin: 0 14px;
+        padding: 21px 0;
+    }
+}
+
+@media(max-width: 370px){
+    .benefits__title{
+        font-size: 72px;
+    }
+}

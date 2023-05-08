@@ -1,0 +1,74 @@
+{{ 'benefits.css' | asset_url | stylesheet_tag }}
+<div class="benefits">
+    <div class="container">
+        <div class="benefits__inner">
+            <h2 class="story__title main__title">{{ section.settings.title }}</div>
+            <div class="benefits__items">
+                {% for block in section.blocks %}
+                    <div class="benefits__item">
+                        {{ block.settings.image | img_url: 'master' | img_tag }}
+                        <h4 class="benefits__item-title">{{ block.settings.title }}<h4>
+                        <p class="benefits__item-subtitle">{{ block.settings.subtitle }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <a href="{{ section.settings.collection.url }}" class="benefits__button">{{ section.settings.button-label }}</a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Benefits section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "WHAT MAKES US BETTER THAN STAR BUCKS"
+            },
+            {
+                "type": "text",
+                "id": "button-label",
+                "label": "Button label",
+                "default": "Go to our coffee"
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "A collection that will open when you click on the button"
+            }
+        ],
+        "max_blocks": 3,
+        "blocks": [
+            {
+                "name": "Item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Item icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Item title",
+                        "default": "lorem ipsum"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "subtitle",
+                        "label": "Item description",
+                        "default": "This is where it all started. We visited our partners at Twongerekawa Coko back in 2018."
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Benefits section"
+            }
+        ]
+    }
+{% endschema %}

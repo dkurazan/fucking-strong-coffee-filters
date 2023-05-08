@@ -1,0 +1,85 @@
+<div class="product-card">
+    <div class="product-card__inner">
+        <a href="{{ product.url }}">
+            <div class="product-card__img">
+                {% if product.featured_image %}
+                    {{ product.featured_image | img_url: 'master' | img_tag }}
+                {% else %}
+                    {{ 'product-1' | placeholder_svg_tag }}
+                {% endif %}
+            </div>
+            {% if product.metafields.custom.right_corner_label %}
+                <div class="rigt_corner_label">{{ product.metafields.custom.right_corner_label }}</div>
+            {% endif %}
+            
+        </a>
+        <div class="product-card__text">
+            <h5>{{ product.title }}</h5>
+            {% if product.metafields.custom.product_card_subtitle != blank %}
+                <p>{{ product.metafields.custom.product_card_subtitle }}</p>
+            {% endif %}
+        </div>
+        <div class="product-card__icons" {% if product.metafields.custom.hide_icons_and_labels %}style="display: none;"{% endif %}>
+            <ul>
+                {% unless product.metafields.custom.coffee_beans_icon_label or product.metafields.custom.first_icon or product.metafields.custom.cup_of_coffee_icon_label or product.metafields.custom.second_icon or product.metafields.custom.glass_icon_label or product.metafields.custom.third_icon %}
+                    <li>
+                        Grinder for espresso
+                        {% render 'coffee-beans-icon' %}
+                    </li>
+                    <li>
+                        40 cups
+                        {% render 'tasty-icon' %}
+                    </li>
+                    <li>
+                        12%
+                        {% render 'jar-icon' %}
+                    </li>
+                {% else %}
+                    {% if product.metafields.custom.coffee_beans_icon_label != blank or product.metafields.custom.first_icon != blank %}
+                        <li>
+                            {% if product.metafields.custom.coffee_beans_icon_label %}
+                                {{ product.metafields.custom.coffee_beans_icon_label }}
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if product.metafields.custom.first_icon %}
+                                {{ product.metafields.custom.first_icon | img_tag }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                    {% if product.metafields.custom.cup_of_coffee_icon_label != blank or product.metafields.custom.second_icon != blank %}
+                        <li>
+                            {% if product.metafields.custom.cup_of_coffee_icon_label %}
+                                {{ product.metafields.custom.cup_of_coffee_icon_label }}
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if product.metafields.custom.second_icon %}
+                                {{ product.metafields.custom.second_icon | img_tag  }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                    {% if product.metafields.custom.glass_icon_label != blank or product.metafields.custom.third_icon != blank %}
+                        <li>
+                            {% if product.metafields.custom.glass_icon_label %}
+                                {{ product.metafields.custom.glass_icon_label }}
+                            {% else %}
+                                
+                            {% endif %}
+                            {% if product.metafields.custom.third_icon %}
+                                {{ product.metafields.custom.third_icon | img_tag  }}
+                            {% else %}
+                                
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                {% endunless %}
+            </ul>
+        </div>
+        <a href="{{ product.url }}" class="product-card__button">{{ 'general.index.product_button_label' | t }}</a>
+    </div>
+</div>

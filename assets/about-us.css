@@ -1,0 +1,426 @@
+.about{
+    padding: 143px 0 0;
+    overflow: hidden;
+}
+
+
+.about__block{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 216px;
+}
+
+.about__block:last-child{
+    padding-bottom: 312px;
+}
+
+.about__block-reverse{
+    flex-direction: row-reverse;
+}
+
+.about__block-title{
+    margin-bottom: 30px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 110%;
+    color: #2D2B27;
+    text-transform: uppercase;
+}
+
+.about__block-text{
+    max-width: 724px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__block-text p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.about__block-text p:nth-child(2){
+    padding-bottom: 20px;
+}
+
+.about__block-image{
+    flex: 0 0 35.27778%;
+    max-width: 35.27778%;
+}
+
+.about__block-image-bg{
+    max-width: 509px;
+    width: 100%;
+    height: 637px;
+    background-image: url(review-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about__block-image-bg>img{
+    width: 100%;
+    height: 510px;
+    padding: 53px 30px 0 30px;
+    object-fit: cover;
+}
+
+.about__block-image-bg div{
+    position: absolute;
+    top: -55px;
+}
+
+.about__block-reverse .about__block-image{
+    margin-left: 50px;
+}
+
+.about__big-image{
+    max-width: 1521px;
+    margin: 0 auto;
+    padding-bottom: 128px;
+}
+
+.about__big-image-inner{
+    width: 100%;
+    position: relative;
+}
+
+.about__big-image-inner>img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.about__big-image-inner div{
+    position: absolute;
+}
+
+.big-image-patch-1{
+    top: -110px;
+    left: -110px;
+}
+
+.big-image-patch-2{
+    bottom: -120px;
+    right: -120px;
+}
+
+.about__big-image-title{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+}
+
+.producers{
+    padding-bottom: 67px;
+}
+
+.producers__title{
+    margin-bottom: 48px;
+    text-align: center;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2D2B27;
+}
+
+.producers__blocks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.producers__block{
+    flex: 0 0 28.75%;
+    max-width: 28.75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.producers__img{
+    max-width: 404px;
+    width: 100%;
+    height: 506px;
+    background-image: url(review-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto 41px;
+}
+
+.producers__img img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    padding: 40px 22px 0 25px;
+}
+
+.producers__block-title{
+    margin-bottom: 24px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2D2B27;
+}
+
+.producers__block-inner p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 397px;
+    margin: 0 auto 40px;
+}
+
+.producers__block-inner>a{
+    max-width: 76.8116%;
+    display: block;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #EB2240;
+    padding: 21px 25px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 auto;
+    border: 1px solid #EB2240;
+    transition: .5s all ease-in-out;
+    text-align: center;
+}
+
+.producers__block-inner>a:hover{
+    background-color: #fff;
+    color: #EB2240;
+    transition: .5s all ease-in-out;
+}
+
+.banner__content h1{
+    max-width: 800px;
+}
+
+@media (max-width: 1700px) {
+    
+    .about__big-image{
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .about .container{
+        padding: 0 30px;
+    }
+
+    .producers__blocks{
+        justify-content: space-around;
+    }
+
+    .producers__block{
+        flex: 0 0 40%;
+        max-width: 40%;
+        margin-bottom: 50px;
+    }
+
+    .about__block-reverse .about__block-image{
+        margin-left: 0;
+    }
+
+    .about__block{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__block-image{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about__block-title, .about__block-text p {
+        text-align: center;
+    }
+
+    .about__block-text{
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about__big-image{
+        max-width: 800px;
+    }
+
+    .big-image-patch-2{
+        display: none;
+    }
+}
+
+@media (max-width: 1110px) {
+    /* .about__big-image-inner>img{
+        object-fit: cover;
+        width: fit-content;
+    } */
+
+    .producers__block {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .producers__block-inner>a{
+        max-width: 397px;
+    }
+}
+
+@media (max-width: 1000px){
+    .producers{
+        padding-bottom: 0;
+    }
+
+    .producers__block:last-child{
+        margin-bottom: 0;
+    }
+
+    .about__big-image{
+        padding: 0 30px 128px;
+    }
+
+    .big-image-patch-1 {
+        top: -55px;
+        left: -55px;
+    }
+
+    .big-image-patch-1 img{
+        width: 50%;
+    }
+
+    .about__big-image-inner{
+        height: 448px;
+    }
+
+    .about__big-image-inner>img{
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+
+    }
+}
+
+@media (max-width: 600px){
+    .about__block-image-bg {
+        max-width: 339px;
+        max-height: 424px;
+
+    }
+
+    .about__block-image-bg>img {
+        padding: 35px 22px 0 22px;
+        height: 340px;
+    }
+
+    .about{
+        padding-top: 54px;
+    }
+
+    .about-title{
+        font-size: 71px;
+    }
+
+    .about__block p{
+        font-size: 18px;
+    }
+
+    .about__block{
+        padding-bottom: 93px;
+    }
+    
+    .about__big-image-title{
+        font-size: 16px;
+    }
+
+    .about__big-image{
+        padding-bottom: 84px;
+    }
+
+    .about__block:last-child {
+        padding-bottom: 92px;
+    }
+
+    .about__block:last-child .about__block-image{
+        display: none;
+    }
+
+    .producers{
+        padding-bottom: 77px;
+    }
+    
+}
+
+@media (max-width: 470px){
+    .producers__img{
+        max-width: 345px;
+        max-height: 432px;
+    }
+
+    .producers__img img{
+        padding: 34px 20px 0 20px;
+        height: 343px;
+    }
+}
+
+@media (max-width: 400px){
+    .about__block-image-bg, .producers__img {
+        max-width: 280px;
+        max-height: 350px;
+    }
+
+    .about__block-image-bg>img, .producers__img img{
+        padding: 29px 17px 0 17px;
+        height: 280px;
+    }
+
+    .about .container{
+        padding: 0 16px;
+    }
+
+    .about__big-image{
+        padding: 0 16px 84px;
+    }
+
+    .producers__block-inner>a{
+        max-width: 100%;
+        font-size: 20px;
+    }
+}

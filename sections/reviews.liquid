@@ -1,0 +1,177 @@
+{{ 'reviews.css' | asset_url | stylesheet_tag }}
+<div class="reviews">
+    <div class="container-xl">
+        <div class="reviews__inner">
+            <div class="container">
+                <div class="reviews__info">
+                    <h2 class="reviews__title main__title">{{ section.settings.title }}</h2>
+                    <div class="reviews__items" >
+                        {% for block in section.blocks %}
+                            <div class="reviews__item">
+                                {% if block.settings.image != blank %}
+                                    <div class="review__img">
+                                        {{ block.settings.image | img_url: 'master' | img_tag }}
+                                    </div>
+                                {% endif %}
+                                <div class="review__rating">
+                                    {% if block.settings.rating == 0 %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 1 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 2 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 3 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 4 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 5 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                    {% endif %}
+                                </div>
+                                <h4>{{ block.settings.review-title }}</h4>
+                                <p>{{ block.settings.text }}</p>
+                                <h6>{{ block.settings.author-name }}</h6>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="reviews__items-mobile" >
+                        {% for block in section.blocks %}
+                            <div class="reviews__item">
+                                {% if block.settings.image != blank %}
+                                    <div class="review__img">
+                                        {{ block.settings.image | img_url: 'master' | img_tag }}
+                                    </div>
+                                {% endif %}
+                                <div class="review__rating">
+                                    {% if block.settings.rating == 0 %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 1 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 2 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 3 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 4 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 5 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                    {% endif %}
+                                </div>
+                                <h4>{{ block.settings.review-title }}</h4>
+                                <p>{{ block.settings.text }}</p>
+                                <h6>{{ block.settings.author-name }}</h6>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Reviews",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "SOME OF OUR FRIENDS"
+            }
+        ],
+        "max_blocks": 3,
+        "blocks": [
+            {
+                "name": "Review item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Review image"
+                    },
+                    {
+                        "type": "range",
+                        "id": "rating",
+                        "label": "Number of stars in the rating",
+                        "min": 0,
+                        "max": 5,
+                        "default": 4
+                    },
+                    {
+                        "type": "text",
+                        "id": "review-title",
+                        "label": "Review title",
+                        "default": "Amazing coffee!"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "text",
+                        "label": "Review text",
+                        "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+                    },
+                    {
+                        "type": "text",
+                        "id": "author-name",
+                        "label": "Review author name",
+                        "default": "Name Surname"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Reviews"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,205 @@
+.footer{
+    padding: 190px 0 27px;
+}
+
+.footer__row{
+    justify-content: space-between;
+}
+
+.footer__row:first-child{
+    padding-bottom: 42px;
+}
+
+.footer__row>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__row>div:first-child{
+    max-width: 324px;
+    width: 100%;
+}
+
+.footer__row>div:last-child{
+    max-width: 857px;
+    width: 100%;
+}
+
+.footer__nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__title{
+    margin-bottom: 12px;
+    font-family: 'Hind Vadodara';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.86);
+}
+
+.footer__title::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 130px;
+    background-color: rgba(8, 5, 1, 0.2);
+    margin-top: 9px;
+}
+
+.footer__col a{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.7); 
+    text-decoration: none;
+}
+
+.footer__col a:hover{
+    text-decoration: underline;
+}
+
+.footer__about p{
+    max-width: 374px;
+}
+
+.footer__col p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.7);
+}
+
+.footer__newsletter p{
+    max-width: 419px;
+}
+
+.footer__newsletter form{
+    margin-top: 104px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__newsletter input{
+    border: none;
+    border-bottom: 1px solid rgba(8, 5, 1, 0.2);
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+    padding-bottom: 11px;
+    flex: 0 0 100%;
+    
+    
+}
+
+.footer__newsletter input.active{
+    background-image: url(email-subscribed.svg);
+    background-position: right center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    transition: .5s ease;
+}
+
+.footer__newsletter input:focus{
+    outline: none;
+    width: 100%;
+}
+
+.footer__newsletter button{
+    margin-top: 23px;
+    border: none;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #080501;
+    background-color: #fff;
+    padding-left: 0;
+}
+
+.footer__newsletter button::after{
+    content: '→';
+    margin-left: 10px;
+    transition: .5s all ease-in-out;
+}
+
+.footer__newsletter button:hover{
+    cursor: pointer;
+}
+
+.footer__newsletter button:hover::after{
+    cursor: pointer;
+    margin-left: 17px;
+    transition: .5s all ease-in-out;
+}
+
+.footer__row:last-child h6{
+    margin: 0 auto;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+    text-align: center;
+}
+
+@media( max-width: 1500px ){
+    .footer .container{
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 1176px){
+    .footer__row>div:last-child{
+        flex-wrap: wrap;
+    }
+
+    .footer__row:first-child{
+        gap: 20%;
+    }
+
+    .footer__about{
+        padding-bottom: 30px;
+    }
+
+    .footer__newsletter form {
+        margin-top: 48px;
+    }
+}
+
+@media(max-width: 650px){
+    .footer__row{
+        flex-wrap: wrap;
+    }
+    
+    .footer__row>div:first-child{
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 600px){
+    .footer{
+        padding-top: 38px;
+    }
+
+    .footer .container{
+        padding: 0 16px;
+    }
+
+    .footer__about{
+        padding: 48px 0;
+    }
+
+    .footer__row:first-child {
+        padding-bottom: 22px;
+    }
+
+}

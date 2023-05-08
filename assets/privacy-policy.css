@@ -1,0 +1,77 @@
+.privacy__inner{
+    margin: 0 auto;
+    max-width: 1009px;
+    padding-top: 88px;
+}
+
+.privacy__title{
+    margin-bottom: 64px;
+    font-family: 'SignPainter';
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #2D2B27;
+}
+
+.privacy__block-title{
+    margin-bottom: 24px;
+    font-family: 'SignPainter';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #2D2B27;
+}
+
+.privacy__block:last-child h3{
+    margin-top: 30px;
+}
+
+.privacy__block p{
+    padding-bottom: 24px;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.banner__content h1{
+    letter-spacing: 5px;
+}
+
+@media (max-width:1050px) {
+    .privacy__inner{
+        padding: 88px 30px 0;
+    }
+}
+
+@media (max-width:768px) {
+    .privacy__title{
+        font-size: 71px;
+    }
+
+    .privacy__block-title{
+        font-size: 32px;
+    }
+
+    .privacy__block p{
+        font-size: 18px;
+    }
+
+    .privacy__inner{
+        padding: 88px 15px 0;
+    }
+}
+
+@media (max-width:400px) {
+    .banner__content h1{
+        font-size: 80px;
+    }
+}

@@ -1,0 +1,233 @@
+.contact{
+    padding: 65px 0 94px;
+}
+
+.contact__inner{
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.contact__title{
+    margin-bottom: 82px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.contact__content-block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__content-block form{
+    flex: 0 0 46.66667%;
+    max-width: 46.66667%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact__content-block h4{
+    margin-bottom: 24px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    color: #2D2B27;
+}
+
+.contact__content-block input{
+    margin-bottom: 24px;
+    border: none;
+    border-bottom: 0.5px solid #000000;
+    padding: 16px 0 16px 10px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+}
+
+.contact__content-block input::placeholder{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+}
+
+.contact__content-block textarea{
+    border: none;
+    border-bottom: 0.5px solid #000000;
+    height: 134px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+}
+
+input.contact__button{
+    border: 1px solid rgba(45, 43, 39, 1);
+    padding: 22px 225px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    background-color: #2D2B27;
+    color: #FFFFFF;
+    transition: .5s all ease-in-out;
+}
+
+input.contact__button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    transition: .5s all ease-in-out;
+    color: #2D2B27;
+}
+
+.contact__content-block input:focus, .contact__content-block textarea:focus{
+    outline: none;
+}
+
+.contact__content-block textarea{
+    margin-bottom: 24px;
+}
+
+.contact__info{
+    flex: 0 0 39.83739%;
+    max-width: 39.83739%;
+}
+
+.contact__info-inner{
+    padding: 45px 0 41px 40px;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(new-product-bg.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+.contact__info-inner li{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding-left: 65px;
+    color: #333333;
+    min-height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+.contact__info-inner li:first-child{
+    background: url(contact-icon-1.png) left no-repeat;
+}
+
+.contact__info-inner li:nth-child(2){
+    background: url(contact-icon-2.png) left no-repeat;
+}
+
+.contact__info-inner li:last-child{
+    background: url(contact-icon-3.png) left top no-repeat;
+    align-items: start;
+}
+
+.social-networks{
+    top: 450px;
+}
+
+
+@media (max-width: 1300px) {
+    .contact {
+        padding: 65px 30px 94px;
+    }
+
+    input.contact__button{
+        width: 100%;
+        padding: 22px 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1150px) {
+    .contact__content-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__content-block input {
+        margin-bottom: 48px;
+    }
+
+    .contact{
+        padding-bottom: 0;
+    }
+
+    footer.footer{
+        padding-top: 138px;
+    }
+    
+    .contact__info, .contact__content-block form {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .contact__info-inner{
+        width: 343px;
+        height: 215px;
+        padding: 38px 0 28px 26px;
+    }
+
+    .contact__info-inner li{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact__title{
+        font-size: 71px;
+    }
+
+    .contact{
+        padding: 18px 15px 0;
+    }
+
+    .contact__title {
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact__info-inner{
+        width: 290px;
+    }
+}

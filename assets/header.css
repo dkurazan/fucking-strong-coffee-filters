@@ -1,0 +1,350 @@
+.header__row{
+    justify-content: space-between;
+    padding: 21px 0 14px 0;
+}
+
+.header{
+    background-color: #fff;
+    position: relative;
+    transition: .5s all ease-in-out;
+}
+
+.header__popup-mobile-active{
+    background-color: #EB2240;
+    transition: .5s all ease-in-out;
+}
+
+.header__navigation, .header__cart, .header-mobile__menu, .header-mobile__cart{
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.header-mobile__menu{
+    align-items: center;
+    position: relative;
+}
+
+.header__logo, .header-mobile__logo{
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.header__cart{
+    justify-content: end;
+}
+
+.header__navigation nav{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header__navigation a{
+    font-family: SignPainter;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(14, 11, 7, 1);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    transition: .5s all ease-in-out;
+}
+
+.header__navigation a:hover{
+    color: #EB2240;
+    transition: .5s all ease-in-out;
+}
+
+.header__logo-inner{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__logo-inner img{
+    max-height: 85px;
+}
+
+.header__logo-inner-mob{
+    position: relative;
+}
+
+.header__logo-inner-mob img:last-child{
+    position: absolute;
+    visibility: 0;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+
+.header__popup-mobile-active .header__logo-inner-mob img:last-child{
+    visibility: visible;
+    opacity: 1;
+    transition: .5s all ease-in-out;
+}
+
+.header__cart{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header__cart-button{
+    display: flex;
+    align-items: end;
+    text-decoration: none;
+}
+
+.header__cart-button path{
+    transition: .5s all ease-in-out;
+}
+
+.header__cart-button:hover path{
+    stroke: #EB2240;
+    transition: .5s all ease-in-out;
+}
+
+.header__cart-button img{
+    margin-right: 17px;
+}
+
+.header__cart-button span{
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    color: rgba(8, 5, 1, 0.75);
+}
+
+.header__side-menu-button{
+    display: flex;
+    align-items: end;
+}
+
+.header__side-menu-button:hover{
+    cursor: pointer;
+}
+
+.header__row-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 19px;
+    display: none;
+}
+
+.header-mobile__cart{
+    justify-content: end;
+}
+
+
+.header-mobile__menu svg{
+    transform: scale( -1, 1);
+}
+
+.side-menu-button{
+    transition: .5s all ease-in-out;
+}
+
+.side-menu-active-button{
+    position: absolute;
+    left: -5px;
+    transition: .5s all ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    padding: 9.5px 13px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.side-menu-button-hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s all ease-in-out;
+}
+
+.header-mobile__cart a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-mobile__cart span{
+    padding-right: 5px;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    color: rgba(8, 5, 1, 0.75);
+    white-space: nowrap;
+    transition: .5s all ease-in-out;
+}
+
+.header-mobile__cart path, .header-mobile-logo path{
+    transition: .5s all ease-in-out;
+}
+
+.side-menu-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-mobile{
+    position: absolute;
+    top: 91px;
+    left: -110%;
+    width: 100%;
+    z-index: 10;
+    background: #EB2240;
+    height: 100vh;
+    transition: .5s all ease-in-out;
+}
+
+.popup-mobile__active{
+    left: 0;
+    transition: .5s all ease-in-out;
+}
+
+.body_mobile-menu-active{
+    overflow: hidden;
+}
+
+.header-mobile-logo path{
+    transition: .5s all ease-in-out;
+}
+
+.header__popup-mobile-active .header-mobile-logo path{
+    fill: white;
+    transition: filter .5s ease-in-out;
+}
+
+.header__popup-mobile-active .header-mobile__logo img {
+    transition: filter .5s ease-in-out;
+    filter: brightness(0);
+}
+
+.header__popup-mobile-active .header-mobile__logo img {
+    filter: brightness(0) invert(1);
+    transition: .5s all ease-in-out;
+
+}
+
+
+.mobile-cart-logo-active{
+    stroke: white;
+    transition: .5s all ease-in-out;
+}
+
+span.mobile-cart-label-active{
+    color: rgba(255, 255, 255, 0.75);
+    transition: .5s all ease-in-out;
+}
+
+.popup-mobile__inner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+}
+
+.popup-mobile__nav-top{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.popup-mobile__nav-top a{
+    font-family: 'SignPainter';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.popup-mobile__nav-bottom{
+    padding: 0 20px 110px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popup-mobile__nav-bottom a{
+    text-decoration: none;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.gtranslate_wrapper.gt_container--3jzdam{
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.gtranslate_wrapper.gt_container--3jzdam a{
+    color: rgba(14, 11, 7, 1);
+
+}
+
+.header__cart a.glink.gt-current-lang, .popup-mobile__lang-switch a.glink.gt-current-lang{
+    text-decoration: underline ;
+    font-weight: 400;
+}
+
+.glink.nturl.notranslate:first-of-type::after{
+    content: '|';
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+.popup-mobile__lang-switch{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.popup-mobile__lang-switch .gtranslate_wrapper.gt_container--3jzdam a{
+    color: rgba(255, 255, 255, 0.75);
+    
+}
+
+
+@media(max-width: 1480px){
+    .header{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 900px){
+    .header__row{
+        display: none;
+    }
+
+    .header{
+        padding: 0;
+    }
+
+    .header .container{
+        padding: 0 20px;
+    }
+
+    .header__row-mobile{
+        display: flex;
+    }
+}

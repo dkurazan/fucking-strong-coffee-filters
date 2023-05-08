@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "banner": {
+      "type": "image-banner-2",
+      "disabled": true,
+      "settings": {
+        "video_link": "",
+        "title-xl": "So...who the fuck are we?"
+      }
+    },
+    "about-us": {
+      "type": "template-about-us",
+      "blocks": {
+        "48c6315f-53f0-4648-a37f-3435c5b343e4": {
+          "type": "block",
+          "settings": {
+            "producer-image": "shopify:\/\/shop_images\/FB6048C5-A247-4AEB-8ECC-7DD3380E083D_2.jpg",
+            "producer-title": "Coko",
+            "producer-subtitle": "A majority women-run cooperative in the rolling hills of Gakenke Province, Rwanda. Our very first origin partners, and the inspiration for how we do things.",
+            "producer-btn": "Read More",
+            "producer-url": "shopify:\/\/products\/fucking-strong-coffee-from-rwanda",
+            "collection": ""
+          }
+        },
+        "95af9fc3-fb37-459b-8a70-c54fc59e4783": {
+          "type": "block",
+          "settings": {
+            "producer-image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-10_at_4.10.52_PM.png",
+            "producer-title": "Paguaga Family",
+            "producer-subtitle": "Third-generation coffee producers from northern Nicaragua who strive to make their estates a model for local farmers to follow by establishing and sharing systems for soil analysis and rigorous crop nutrition plans.",
+            "producer-btn": "Read More",
+            "producer-url": "shopify:\/\/products\/fucking-strong-coffee-from-nicaragua",
+            "collection": ""
+          }
+        },
+        "429fb6d5-559a-4a2f-b675-1fbf820b758f": {
+          "type": "block",
+          "settings": {
+            "producer-image": "shopify:\/\/shop_images\/Screen_Shot_2023-03-10_at_10.18.47_AM.png",
+            "producer-title": "CPNCK",
+            "producer-subtitle": "Driven by their mission of securing a more peaceful, independent future for the island's youth, Gilbert and CPNCK have made a serious name for themselves amongst specialty buyers over the last several harvests.",
+            "producer-btn": "Read More",
+            "producer-url": "shopify:\/\/products\/fucking-strong-coffee-from-congo",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "48c6315f-53f0-4648-a37f-3435c5b343e4",
+        "95af9fc3-fb37-459b-8a70-c54fc59e4783",
+        "429fb6d5-559a-4a2f-b675-1fbf820b758f"
+      ],
+      "settings": {
+        "title-1": "It began in Amsterdam...",
+        "description-1": "<p>Back in 2018, two bushy-tailed young blokes met inside a quirky little shop named Good Beans tucked away down a narrow Amsterdam alley. In many ways, we were – and remain – peculiar partners: one blunt Norwegian in love with crunching numbers and bored with corporate life, the other a chatty American with big Euro-dreams and little idea how the fuck to follow them. Perhaps it was the buzz of the Binnen Oranjestraat, or the stained-glass windows catching the summer sun, or the old school checkerboard tile floor… we were quickly, hopelessly hooked.<\/p><p>We turned the space into a humble little specialty bean shop, with a couch and a couple stools for our very first regulars to sip and chat for hours during those slow early days. Once settled – in a fit of boredom or brashness or both – we decided to throw ourselves into building an in-house brand. Enter: Fucking Strong Coffee.<\/p>",
+        "img-1": "shopify:\/\/shop_images\/Screen_Shot_2023-03-20_at_2.15.25_PM.png",
+        "img-patch-1": false,
+        "title-2": "...off to rwanda",
+        "description-2": "<p>From the start, Fucking Strong Coffee was about calling bull shit on so much of what specialty coffee culture and aesthetics had become: pretentious, monotonous, self-important, inaccessible. But if we were going to talk the talk, we sure as hell had to walk the walk. So, we met a small importer called This Side Up – with just the right balance of grounded pragmatism and hippie flair – and next thing you know, Cody was off to visit our first origin partners: Twongerekawa Coko Cooperative Society in the rolling hills of northwestern Rwanda. <\/p><p>The visit revealed the very best of what specialty coffee production is about: passionate smallholder farmers, traceable supply chains, localized sustainability, and on and on. And we realized just how much that side of the story was being outshone by the fine-wine-ification of third-wave branding. <\/p>",
+        "img-2": "shopify:\/\/shop_images\/FB6048C5-A247-4AEB-8ECC-7DD3380E083D.jpg",
+        "img-patch-2": false,
+        "title-3": "... ready to rumble",
+        "description-3": "<p>Back in Amsterdam, we became determined to talk about ourselves and our partners more clearly, loudly, and indignantly. Our brand became more than a pithy catchphrase… suddenly it was a rallying cry for us and the folks around us to stop taking shit so seriously, to lower our noses and open our arms. Coffee, not caviar! Beans, not Beaujolais! Arabica for the people! You get the picture, comrade. <\/p><p>The problem? We were broke. Our little shop was full of warmth and our heads full of ideas, but we were struggling to make things click. Then, the world stopped…<\/p>",
+        "img-3": "shopify:\/\/shop_images\/BB542641-49BC-4B2B-BE77-1EE2266FA3E0.jpg",
+        "img-patch-3": false,
+        "title-4": "... and away we go.",
+        "description-4": "<p>Like most industries, March 2020 turned coffee on its head. Takeaway flat whites became a lifeline for many – a tiny moment of interaction during lonely days, a break from the monotony of an upside down reality. And at home, specialty brewing was no longer a nerd’s world of niche equipment and hoity-toity hobby-ists. Bored and curious, all sorts of folks were dusting off their French Presses, Googling brewing instructions, spending a little more on quality beans. So, we held on tight and surfed the wave we’d been awaiting: we connected with new producers, designed funkier cans, developed better roasts, and started selling far beyond Amsterdam’s canals.<\/p><p>And that brings us here, writing this to you, a lucky duck about to try some damn tasty coffee produced by some inspiring folks. While you brew, just remember: whether you’re a nerd or novice, the grooviest of days start with a Fucking Strong Coffee. <\/p>",
+        "img-4": "shopify:\/\/shop_images\/kilo_cody_4_website.jpg",
+        "img-patch-4": false,
+        "big-image-subtitle": "Cody in Amsterdam with our first cans, Winter 2020",
+        "img-patch-5": false
+      }
+    },
+    "social-networks": {
+      "type": "social-networks",
+      "settings": {
+        "social-networks": "social-networks"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "about-us",
+    "social-networks"
+  ]
+}

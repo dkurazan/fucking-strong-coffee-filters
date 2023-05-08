@@ -1,0 +1,74 @@
+{{ 'banner.css' | asset_url | stylesheet_tag }}
+<div class="banner">
+    <div class="container-xl">
+        <div class="banner__inner">
+            <div class="banner__background">
+                {% if section.settings.background-image != blank %}
+                    {{ section.settings.background-image | img_url: 'master' | img_tag }}
+                {% else %}
+                    <div class="banner_bg-red"></div>
+                {% endif %}
+            </div>
+            <div class="banner__content">
+                <h1>{{ section.settings.title-xl }}</h1>
+                <h2>{{ section.settings.title-sm }}</h2>
+                <div>
+                    <a href="{{ section.settings.button-link-1 }}">{{ section.settings.button-label-1 }}</a>
+                    <a href="{{ section.settings.button-link-2 }}">{{ section.settings.button-label-2 }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image banner",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "background-image",
+                "label": "Background image"
+            },
+            {
+                "type": "text",
+                "id": "title-xl",
+                "label": "Big title",
+                "default": "Stay awake"
+            },
+            {
+                "type": "text",
+                "id": "title-sm",
+                "label": "Small title",
+                "default": "Fucking strong coffee"
+            },
+            {
+                "type": "text",
+                "id": "button-label-1",
+                "label": "First button label",
+                "default": "shop now"
+            },
+            {
+                "type": "url",
+                "id": "button-link-1",
+                "label": "First button url"
+            },
+            {
+                "type": "text",
+                "id": "button-label-2",
+                "label": "Second button label",
+                "default": "about us"
+            },
+            {
+                "type": "url",
+                "id": "button-link-2",
+                "label": "Second button url"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image banner"
+            }
+        ]
+    }
+{% endschema %}

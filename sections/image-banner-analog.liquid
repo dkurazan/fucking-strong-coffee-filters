@@ -1,0 +1,86 @@
+{{ 'banner-analog.css' | asset_url | stylesheet_tag }}
+<div class="banner-analog">
+    <div class="container-xl">
+        <div class="banner-analog__inner">
+            <div class="banner-analog__background">
+                <div class="desktop-only">
+                    {% if section.settings.background-image != blank  %}
+                        
+                        {{ section.settings.background-image | img_url: 'master' | img_tag }}
+                        
+                    {% else %}    
+                        <div class="banner-analog_bg-red"></div>
+                    {% endif %}
+                </div>
+                <div class="mobile-only">
+                    {% if section.settings.mobile-background-image != blank %}
+                        
+                            {{ section.settings.mobile-background-image | img_url: 'master' | img_tag }}
+                        
+                    {% else %}    
+                        <div class="banner-analog_bg-red"></div>
+                    {% endif %}
+                </div>
+                <div class="banner-analog__content">
+                <h1>{{ section.settings.title-xl }}</h1>
+                <div>
+                        <a href="{{ section.settings.button-link-1 }}">{{ section.settings.button-label-1 }}</a>
+                        <a href="{{ section.settings.button-link-2 }}">{{ section.settings.button-label-2 }}</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image banner analog",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "background-image",
+                "label": "Background image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile-background-image",
+                "label": "Background image mobile"
+            },
+            {
+                "type": "text",
+                "id": "title-xl",
+                "label": "Title",
+                "default": "It’s coffe not caviar"
+            },
+            {
+                "type": "text",
+                "id": "button-label-1",
+                "label": "First button label",
+                "default": "shop now"
+            },
+            {
+                "type": "url",
+                "id": "button-link-1",
+                "label": "First button url"
+            },
+            {
+                "type": "text",
+                "id": "button-label-2",
+                "label": "Second button label",
+                "default": "about us"
+            },
+            {
+                "type": "url",
+                "id": "button-link-2",
+                "label": "Second button url"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image banner analog"
+            }
+        ]
+    }
+{% endschema %}

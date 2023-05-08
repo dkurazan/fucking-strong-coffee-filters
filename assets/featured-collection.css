@@ -1,0 +1,167 @@
+.featured-collection{
+    padding: 71px 0 31px 0;
+}
+
+.featured-collection_row{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-template-page .featured-collection_row{
+    padding-bottom: 44px;
+}
+
+.default_product_image{
+    max-width: 386.5px;
+    max-height: 393.35px;
+    width: 100%;
+    height: 100%;
+}
+
+.featured-collection__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-top: -26px;
+}
+
+.featured-collection__title{
+    text-align: left;
+
+}
+
+.featured-collection__subtitle{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.085em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+    color: #0E0B07;
+
+}
+
+.featured-collection .product-card__img{
+    height: 393px;
+}
+
+@media(max-width: 1440px){
+    .featured-collection_row, .featured-collection__header{
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 1400px){
+    .product-card {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    .featured-collection_row{
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 1160px){
+    .product-card__icons ul{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .featured-collection .product-card__img{
+        height: 350px;
+    }
+}
+
+@media(max-width: 1050px){
+    .featured-collection .product-card__img{
+        height: 300px;
+    }
+}
+
+@media(max-width: 1050px){
+    .featured-collection .product-card__img{
+        height: 280px;
+    }
+}
+
+@media(max-width: 900px){
+    .product-card {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .featured-collection{
+        padding: 0;
+    }
+
+    .product-card__img {
+        height: 100%;
+    }
+
+    .featured-collection__header{
+        flex-direction: column;
+    }
+
+    .featured-collection .product-card__img{
+        height: 100%;
+    }
+
+    .product-card__button {
+        background-color: #0E0B07;
+        color: white;
+    }
+
+    .product-card {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 850px){
+    .product-card__button{
+        color: white;
+    }
+}
+
+@media(max-width: 600px){
+    .product-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .featured-collection__title{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        text-align-last: center;
+        padding: 0 12px;
+    }
+
+    .featured-collection_row, .featured-collection__header{
+        padding: 0 14px;
+    }
+    footer.footer{
+        padding-top: 40px;
+    }
+}
+
+@media(max-width: 400px){
+    .featured-collection_row{
+        padding: 0 14px;
+    }
+
+    .product-card__icons li{
+        gap: 5px;
+    }
+
+    .product-card__icons li:first-child{
+        min-width: 0;
+    }
+}
+

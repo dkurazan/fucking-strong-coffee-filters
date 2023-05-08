@@ -1,0 +1,265 @@
+.cart{
+    padding: 65px 0 0 0;
+}
+
+.cart__inner{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.cart__title{
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 110%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 76px;
+}
+
+.cart tr{
+    border-bottom: 1px solid #cecdcc;
+}
+
+.cart__form-titles th{
+    padding-bottom: 12px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+
+    color: rgba(8, 5, 1, 0.86);
+}
+
+.cart__form-titles th:first-child{
+    text-align: left;
+}
+
+.cart td{
+    padding: 30px 0;
+    vertical-align: middle;
+}
+
+.cart td img{
+    max-width: 155px;
+    width: 100%;
+}
+
+.cart__product-blocks tr td:nth-child(2){
+    padding-left: 30px;
+}
+
+.cart__product-blocks td:nth-child(2) a{
+    display: block;
+    padding-bottom: 9px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+}
+
+.cart__product-blocks td:nth-child(2) p{
+    padding-bottom: 9px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/*  */
+
+.cart__product-blocks td:nth-child(3){
+    padding: 0 75px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: #8E8E8E;
+}
+
+.cart__product-blocks td:nth-child(4){
+    padding: 0 75px;
+
+}
+
+.cart__product-blocks td:nth-child(4) input{
+    width: 100px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.cart__product-blocks td:nth-child(4) input:focus{
+    outline: none;
+}
+
+.cart__counter-father{
+    display: flex;
+    align-items: center;
+    height: 210px;
+}
+
+.cart__counter-father button{
+    border: none;
+    background-color: transparent;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+}
+
+.cart__counter-father button:first-child{
+    padding-bottom: 7px;
+}
+
+.cart__counter-father button:hover{
+    cursor: pointer;
+}
+
+.cart__product-blocks td:nth-child(5){
+    padding-left: 75px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.cart__form-titles th:last-child{
+    text-align: end;
+    padding-right: 10px;
+}
+
+.cart__checkout{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.cart__checkout p{
+    margin-bottom: 28px;
+    font-family: 'SignPainter';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+
+.cart__checkout button{
+    border: 1px solid #2D2B27;
+    background-color: #2D2B27;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 22px 89px;
+    transition: .5s all ease-in-out;
+}
+
+.cart__checkout button:hover{
+    cursor: pointer;
+    color: #2D2B27;
+    background-color: transparent;
+    transition: .5s all ease-in-out;
+}
+
+@media (max-width:1220px) {
+    .cart__inner{
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:1050px) {
+    .cart__form-titles th{
+        display: none;
+    }
+
+    .cart__product-blocks, table{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cart__product-block{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .cart__product-block td:first-child{
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+
+    .cart td{
+        padding: 0 0 0 10px !important;
+        height: auto;
+        text-align: start !important;
+        margin-bottom: 13px;
+    }
+
+    .cart__product-block{
+        padding: 25px 0 12px;
+    }
+
+    .cart__product-blocks td:nth-child(2) a:last-child{
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width:800px) {
+    .cart__title{
+        font-size: 71px;
+        text-align: left;
+        margin-bottom: 34px;
+    }
+
+    .cart__product-block{
+        grid-template-columns: 45% 55%;
+    }
+}
+
+@media (max-width: 600px) {
+    footer.footer{
+        padding-top: 111px;
+    }
+}
+
+@media (max-width: 550px) {
+    .cart__checkout{
+        align-items: center;
+    }
+
+    .cart__checkout button{
+        width: 100%;
+    }
+}

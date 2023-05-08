@@ -1,0 +1,66 @@
+{{ 'banner-2.css' | asset_url | stylesheet_tag }}
+<style>
+    {% if section.settings.background-image != blank and section.settings.video_link == blank %}
+        .banner__background::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            display: block;
+            left: 0;
+            right: 0;
+            height: 674px;
+            background: linear-gradient(180deg, rgba(14, 11, 7, 0.85) 7.34%, rgba(14, 11, 7, 0) 123.66%);
+        }
+    {% endif %}
+</style>
+<div class="banner">
+    <div class="container-xl">
+        <div class="banner__inner">
+            <div class="banner__background">
+                {% if section.settings.video_link != blank %}
+                    <video class="video-background" loop autoplay preload="none" muted playsinline>
+                        <source src="{{ section.settings.video_link }}" type="video/mp4">
+                    </video>
+                {% else %}
+                    {% if section.settings.background-image != blank %}
+                        {{ section.settings.background-image | img_url: 'master' | img_tag }}
+                    {% else %}
+                        <div class="banner_bg-red"></div>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <div class="banner__content">
+                <h1>{{ section.settings.title-xl }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image banner",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "background-image",
+                "label": "Background image"
+            },
+            {
+				"type": "url",
+				"id": "video_link",
+				"label": "Video link"
+			},
+            {
+                "type": "text",
+                "id": "title-xl",
+                "label": "Title",
+                "default": "Stay awake"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image banner 2"
+            }
+        ]
+    }
+{% endschema %}

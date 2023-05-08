@@ -1,0 +1,471 @@
+{{ 'product.css' | asset_url | stylesheet_tag }}
+{% assign selected_variant = product.selected_or_first_available_variant %}
+<div class="product-template">
+    <div class="container">
+    {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %} 
+        <input type="hidden" name="id" value="{{ selected_variant.id }}">
+        <div class="product">
+            <div class="row">
+                <div class="product__images">
+                    <div class="product__image">
+                        <div>
+                            {% if product.featured_image %}
+                                <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.src }}" class="product__image-big" loading="lazy" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}" >
+                            {% else %}
+                                {{ 'product-1' | placeholder_svg_tag }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="product__small-images">
+                        {% for image in product.images %}
+                            <div>
+                                <img src="{{ image | img_url: 'master' }}" alt="#" class="product__image-sm">
+                            </div>
+                        {% endfor %}
+                        {% for variant in product.variants %}
+                            <div class="product__variant-img">
+                                <img src="{{ variant.image | img_url: 'master' }}" alt="#" class="product__image-sm" name="{{ variant.id }}" value="{{ variant.id }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% if product.metafields.custom.show_arrow %}
+                        {% render 'new-product-arrow-icon' %}
+                        {% render 'new-product-mobile-arrow-icon' %}
+                    {% endif %}
+                </div>
+                <div class="product__info">
+                    <div class="product__info-inner">
+                        {% if product.title contains 'Fucking Strong Coffee from ' %}
+                            {% if product.metafields.custom.hide_title_above_the_product_title %}
+                                <h3 class="product__title-xl">{{ product.title | upcase }}</h3>
+                            {% else %}
+                                <h4 class="product__title-sm">
+                                    {% if product.metafields.custom.change_title_above_the_product_title %}
+                                        {{ product.metafields.custom.change_title_above_the_product_title }}
+                                    {% else %}
+                                        So fucking strong coffee from...
+                                    {% endif %}
+                                </h4>
+                                <h3 class="product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM ' }}</h3>
+                            {% endif %}
+                        {% else %}
+                            <h3 class="product__title-xl">{{ product.title | upcase }}</h3>
+                        {% endif %}
+                        
+                        <div class="product__price" id="price-{{ section.id }}">
+                            <span>{{ selected_variant.compare_at_price | money }}</span>
+                            <span>{{ selected_variant.price | money }}</span>
+                        </div>
+                        <div class="product__tax">Tax included</div>
+                        {% if product.metafields.product.hide-usp != true %}
+                            <div class="product__usp">
+                                <ul>
+                                    {% if product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank and product.metafields.usp.label_4 != blank %}
+                                        <li 
+                                        {% if product.metafields.usp.icon_1 != blank %}
+                                            style="background-image: url({{ product.metafields.usp.icon_1 | img_url: 'master' }})"
+                                        {% else %}
+                                            style="background-image: url({{ section.blocks[0].settings.image | img_url: 'master' }})"
+                                        {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                        <li 
+                                        {% if product.metafields.usp.icon_2 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_2 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[1].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                        <li 
+                                        {% if product.metafields.usp.icon_3 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_3 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[2].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_3 }}
+                                        </li>
+                                        <li 
+                                        {% if product.metafields.usp.icon_4 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_4 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[3].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_4 }}
+                                        </li>
+                                    {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank %}
+                                        <li 
+                                            {% if product.metafields.usp.icon_1 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_1 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[0].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                        <li 
+                                        {% if product.metafields.usp.icon_2 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_2 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[1].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                        <li 
+                                        {% if product.metafields.usp.icon_3 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_3 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[2].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_3 }}
+                                        </li>
+                                    {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank %}
+                                        <li 
+                                            {% if product.metafields.usp.icon_1 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_1 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[0].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                        <li 
+                                        {% if product.metafields.usp.icon_2 != blank %}
+                                                style="background-image: url({{ product.metafields.usp.icon_2 | img_url: 'master' }})"
+                                            {% else %}
+                                                style="background-image: url({{ section.blocks[1].settings.image | img_url: 'master' }})"
+                                            {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                    {% elsif product.metafields.usp.label_1 != blank %}
+                                        <li 
+                                        {% if product.metafields.usp.icon_1 != blank %}
+                                            style="background-image: url({{ product.metafields.usp.icon_1 | img_url: 'master' }})"
+                                        {% else %}
+                                            style="background-image: url({{ section.blocks[0].settings.image | img_url: 'master' }})"
+                                        {% endif %}
+                                        >
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                    {% else %}
+                                        {% for block in section.blocks %}
+                                            <li style="background-image: url({{ block.settings.image | img_url: 'master' }})">
+                                                {{ block.settings.title }}
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        <form action="{{ routes.cart_add_url }}" method="post" id="AddToCart">
+                            <div class="product__variants">
+                                {% unless product.has_only_default_variant %}
+                                    <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
+                                        {% for option in product.options_with_values %}
+                                            <div class="product__option-block" >
+                                                <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
+                                                <div data-option-block class="product__option-block__inner">
+                                                    
+                                                    {% for value in option.values %}
+                                                        <input 
+                                                            type="radio" 
+                                                            value="{{ value }}" 
+                                                            name="product_variant-{{ option.name }}" 
+                                                            id="radio-{{ value }}"
+                                                            class="product__variant-option"
+                                                        >
+                                                        {% if product.options.size == 1 %}
+                                                            <label for="radio-{{ value }}" class="product__variants-label img-option">
+                                                                {% for variant in product.variants %}
+                                                                    {% if variant.title contains value %}
+                                                                    {% if variant.image %}
+                                                                        {{ variant.image | img_url: 'small' | img_tag }}
+                                                                    {% endif %}
+                                                                        {% if variant.title != blank %}
+                                                                            <span class="product__variants_label">{{ variant.title }}</span>
+                                                                        {% endif %}                 
+                                                                        {% break %}
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </label>
+                                                        {% else %}
+                                                            {% if option.name == "Color" %}
+                                                                <label for="radio-{{ value }}" class="product__variants-label img-option">
+                                                                    {% for variant in product.variants %}
+                                                                        {% if variant.title contains value %}
+                                                                        {% if variant.image != blank %}
+                                                                            {{ variant.image | img_url: 'small' | img_tag }}
+                                                                        {% endif %}
+                                                                            {% break %}
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                </label>
+                                                            {% else %} 
+                                                                <label for="radio-{{ value }}" class="product__variants-label">
+                                                                    {{ value }}
+                                                                </label>
+                                                            {% endif %}  
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    <select 
+                                                        name="options[{{ option.name | escape }}]" 
+                                                        id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                                                    >
+                                                        {% for value in option.values %}
+                                                            <option 
+                                                                value="{{ value | escape }}"
+                                                                {% if option.selected_value == value %}
+                                                                    selected="selected"
+                                                                {% endif %}
+                                                            >
+                                                                {{ value }}
+                                                            </option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                                <script type="application/json">
+                                                    {{ product.variants | json }}
+                                                </script>
+                                            </div>
+                                        {% endfor %}
+                                    </variant-selector>
+                                {% endunless %}
+                            </div>
+                            <button type="submit" name="add" class="product__button" id="AddToCart">add to cart</button>
+                        </form>
+                        <div class="product__description">
+                            {% if product.description != blank %}
+                                {{ product.description }}
+                            {%  else %}
+                                <p>The return of our much-loved, super special edition single estate Kenyan coffee.</p>
+                                <p>Our origin partner Gloria and the folks at Sakami Coffee in Kenya have been churning out beautiful harvests from the slopes of Mt. Elgon for over a decade, tirelessly building one of the most sustainable specialty coffee farms in the country.</p>
+                                <p>Bright and bold, this may just be our most indulgent coffee yet. Features beautifully as a filter coffee or cold brew.</p>
+                                <p>For the nerds: this is a Washed AA from Batian cultivars intercropped with Macadamia shade trees. The Sakami wet mill is powered entirely by solar energy.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if product.metafields.product.hide-tabs != true %}
+                <div class="product__tabs">
+                    <ul class="product__tabs-titles">
+                        <li class="product-tab-1 product-tab-active" data-title="tab-1">{{ section.settings.tab-title-1 }}</li>
+                        <li class="product-tab-2" data-title="tab-2">{{ section.settings.tab-title-2 }}</li>
+                        <li class="product-tab-3" data-title="tab-3">{{ section.settings.tab-title-3 }}</li>
+                    </ul>
+                    <div class="product__tabs-content product__tabs-content-1 active" id="tab-1">
+                        {% if product.metafields.tab.first_tab_common_text != blank %}
+                            <p>{{ product.metafields.tab.first_tab_common_text | newline_to_br }}</p>
+                        {% else %}
+                        {{ section.settings.tab-text-1 }}
+                        {% endif %}
+                    </div>
+                    <div class="product__tabs-content product__tabs-content-2" id="tab-2">
+                        <div class="tabs__welcome-block">
+                            <div class="tabs__welcome-image">
+                                <div class="tabs__welcome-image-bg">
+                                    {% if section.settings.scarp-booky %}
+                                        <style>
+                                            .tabs__welcome-block{
+                                                max-width: 100%;
+                                                width: 100%;
+                                            }
+
+                                            .tabs__welcome-image-bg{
+                                                background-image: none;
+                                                max-width: 593px;
+                                                height: 100%;
+                                            }
+
+                                            .tabs__welcome-image-bg>img{
+                                                padding: 0;
+                                            }
+                                        </style>
+                                        {% if product.metafields.tab.second_tab_first_image != blank %}
+                                            {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
+                                        {% else %}
+                                            {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
+                                        {% endif %}
+                                    {% else %}
+                                        {% if product.metafields.tab.second_tab_first_image != blank %}
+                                            {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
+                                        {% else %}
+                                            {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
+                                        {% endif %}
+                                        <div>
+                                            {{ 'patch-icon.png' | asset_url | img_tag }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="tabs__welcome-text">
+                                <h3>
+                                    {% if product.metafields.tab.second_tab_first_title %}
+                                        {{ product.metafields.tab.second_tab_first_title }}
+                                    {% else %}
+                                        {{ section.settings.tab-2-title-1 }}
+                                    {% endif %}
+                                </h3>
+                                {% if product.metafields.tab.second_tab_first_text != blank %}
+                                    <p>{{ product.metafields.tab.second_tab_first_text | newline_to_br }}</p>
+                                {% else %}
+                                    {{ section.settings.tab-2-text-1 }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% if product.metafields.tab.second_tab_video != blank %}
+                            <div class="tabs__video">
+                                <video poster="https://cdn.shopify.com/s/files/1/0701/1755/6519/files/Rectangle_9.png?v=1674119199">
+                                    <source src="{{ product.metafields.tab.second_tab_video | file_url }}" type="video/mp4">
+                                </video>
+                                <div class="video-play-button">
+                                    {% render 'video-play-button-icon' %}
+                                </div>
+                                <div class="video-pause-button" style="display: none;">
+                                    {% render 'video-pause-button-icon' %}
+                                </div>
+                                {% unless section.settings.scarp-booky %}
+                                    <div class="video-patch-1">
+                                        {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                                    </div>
+                                    <div class="video-patch-2">
+                                        {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                                    </div>
+                                {% endunless %}
+                            </div>
+                        {% endif %}
+                        {% if product.metafields.tab.second_tab_second_title != blank or product.metafields.tab.second_tab_second_text != blank or product.metafields.tab.tab.second_tab_second_image != blank %}
+                            <div class="tabs__info-block">
+                                <div class="tabs__info-text">
+                                    <h3>
+                                        {{ product.metafields.tab.second_tab_second_title }}
+                                    </h3>
+                                    <p>{{ product.metafields.tab.second_tab_second_text | newline_to_br }}</p>
+                                </div>
+                                <div class="tabs__welcome-image">
+                                    {{ product.metafields.tab.tab.second_tab_second_image | img_url: 'master' | img_tag }}
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if product.metafields.tab.second_tab_map_iframe %}
+                          <div class="tabs__map">
+                              <h4>
+                                  {% if product.metafields.tab.second_tab_map_title %}
+                                      {{ product.metafields.tab.second_tab_map_title }}
+                                  {% else %}
+                                      {{ section.settings.map-title }}
+                                  {% endif %}
+                              </h4>
+                              {{ product.metafields.tab.second_tab_map_iframe }}
+                          </div>
+                        {% endif %}
+                    </div>
+                    <div class="product__tabs-content product__tabs-content-3" id="tab-3">
+                        {% if product.metafields.tab.third_tab_common_text != blank %}
+                            <p>{{ product.metafields.tab.third_tab_common_text | newline_to_br }}</p>
+                        {% else %}
+                        {{ section.settings.tab-text-3 }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    {% endform %}
+            
+    </div>
+</div>
+
+
+
+{% render 'scroll-down' %}
+
+{% schema %}
+    {
+        "name": "Product",
+        "settings": [
+            {
+                "type": "text",
+                "id": "tab-title-1",
+                "default": "About this project",
+                "label": "1st tab title"
+            },
+            {
+                "type": "richtext",
+                "id": "tab-text-1",
+                "label": "1st tab text content"
+            },
+            {
+                "type": "text",
+                "id": "tab-title-2",
+                "default": "About the producer",
+                "label": "2nd tab title"
+            },
+            {
+                "type": "image_picker",
+                "id": "tab-2-img-1",
+                "label": "2nd tab 1st block icon"
+            },
+            {
+                "type": "text",
+                "id": "tab-2-title-1",
+                "label": "2nd tab 1st block title",
+                "default": "Hello, my name is Chaia"
+            },
+            {
+                "type": "richtext",
+                "id": "tab-2-text-1",
+                "label": "2nd tab 1st block text"
+            },
+            {
+                "type": "text",
+                "id": "map-title",
+                "label": "Map title",
+                "default": "THIS IS WHERE I WORK"
+            },
+            {
+                "type": "text",
+                "id": "tab-title-3",
+                "default": "About fucking strong coffee",
+                "label": "3th tab title"
+            },
+            {
+                "type": "richtext",
+                "id": "tab-text-3",
+                "label": "3th tab text content"
+            },
+            {
+                "type": "checkbox",
+                "id": "scarp-booky",
+                "label": "Off scarp booky mode",
+                "default": false
+            }
+        ],
+        "max_blocks": 4,
+        "blocks": [
+            {
+                "name": "USP item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Item icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Item title",
+                        "default": "LOREM IPSUM DOLOREM"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

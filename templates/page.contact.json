@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "contact": {
+      "type": "template-contact",
+      "settings": {
+        "title": "got a burning question? drop a line!",
+        "email": "mrgoodbean@goodbeans.nl",
+        "number": "+31651651895",
+        "address": "<p>Binnen Oranjestraat 4 Amsterdam                      1013 JA      <br\/>The Netherlands<\/p>"
+      }
+    },
+    "social-networks": {
+      "type": "social-networks",
+      "settings": {
+        "social-networks": "social-networks"
+      }
+    }
+  },
+  "order": [
+    "contact",
+    "social-networks"
+  ]
+}

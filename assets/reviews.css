@@ -1,0 +1,154 @@
+.reviews .container-xl{
+    background-color:  #F8F6F6;
+}
+
+.reviews__inner{
+    padding: 80px 0;
+}
+
+.reviews__title{
+    text-align: center;
+    margin-bottom: 88px;
+}
+
+.reviews__items{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.reviews__items-mobile{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.reviews__item{
+    flex: 0 0 27.77778%;
+    max-width: 27.77778%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review__img{
+    margin-bottom: 34px;
+   
+}
+
+.review__img img{
+    width: 100%;
+}
+
+.review__rating{
+    margin-bottom: 34px;
+}
+
+.reviews__item h4{
+    margin-bottom: 16px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #2D2B27;
+}
+
+.reviews__item p{
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.reviews__item h6{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.reviews__items-mobile{
+    display: none;
+}
+
+.slick-dots li button:before{
+    content: '';
+    display: block;
+    width: 11px;
+    height: 11px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+@media(max-width: 1100px){
+    .reviews__items{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .reviews__item {
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding-bottom: 30px;
+    }
+
+    .reviews__info{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 900px) {
+    .reviews__title{
+        margin-bottom: 30px;
+    }
+    
+    .reviews__inner{
+        padding-bottom: 0;
+    }
+}
+
+@media(max-width: 600px){
+    .reviews__items-mobile{
+        display: block;
+        padding: 0 14px;
+    }
+
+    .reviews__items{
+        display: none;
+    }
+
+    .review__img img{
+        max-width: 228px;
+        margin: 0 auto;
+    }
+
+    .review__rating{
+        display: flex;
+        justify-content: center;
+    }
+
+    .reviews__item h4{
+        justify-content: center;
+    }
+
+    .reviews__item {
+        padding-bottom: 56px;
+    }
+
+
+
+    .reviews__title{
+        padding: 0 12px;
+    }
+}

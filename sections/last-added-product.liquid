@@ -1,0 +1,119 @@
+{{ 'last-added-product.css' | asset_url | stylesheet_tag }}
+<div class="last-added">
+    <div class="container">
+        {% for product in section.settings.collection.products limit: 1 %}
+            <div class="new-product">
+                <div class="row">
+                    <a href="{{ product.url }}" class="new-product__image">
+                        {% render 'new-product-arrow-icon' %}
+                        {% render 'new-product-mobile-arrow-icon' %}
+                        {% if product.featured_image %}
+                            {{ product.featured_image | img_url: 'master' | img_tag }}
+                        {% else %}
+                            {{ 'product-1' | placeholder_svg_tag }}
+                        {% endif %}
+                    </a>
+                    <div class="new-product__info">
+                        <div class="new-product__info-inner">
+                            {% if product.title contains 'Fucking Strong Coffee from ' %}
+                                <h4 class="new-product__title-sm">So fucking strong coffee from...</h4>
+                                <h3 class="new-product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM'  }}</h3>
+                            {% else %}
+                                <h3 class="new-product__title-xl">{{ product.title | upcase }}</h3>
+                            {% endif %}
+                            
+                            <div class="new-product__price">{{ product.price | money }}</div>
+                            <div class="new-product__tax">Tax included</div>
+                            {% if product.metafields.product.hide-usp != true %}
+                                <div class="new-product__usp">
+                                    <ul>
+                                        {% if product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank and product.metafields.usp.label_4 != blank %}
+                                            <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_1 }}
+                                            </li>
+                                            <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_2 }}
+                                            </li>
+                                            <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_3 }}
+                                            </li>
+                                            <li style="background-image: url({{ section.blocks[3].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_4 }}
+                                            </li>
+                                        {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank %}
+                                            <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_1 }}
+                                            </li>
+                                            <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_2 }}
+                                            </li>
+                                            <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_3 }}
+                                            </li>
+                                        {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank %}
+                                            <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_1 }}
+                                            </li>
+                                            <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_2 }}
+                                            </li>
+                                        {% elsif product.metafields.usp.label_1 != blank %}
+                                            <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                                {{ product.metafields.usp.label_1 }}
+                                            </li>
+                                        {% else %}
+                                            {% for block in section.blocks %}
+                                                <li style="background-image: url({{ block.settings.image | img_url: 'mmaster' }})">
+                                                    {{ block.settings.title }}
+                                                </li>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                            <a href="{{ product.url }}" class="new-product__button">view product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Last added product",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+            }
+        ],
+        "max_blocks": 4,
+        "blocks": [
+            {
+                "name": "USP item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Item icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Item title",
+                        "default": "LOREM IPSUM DOLOREM"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Last added product"
+            }
+        ]
+    }
+{% endschema %}

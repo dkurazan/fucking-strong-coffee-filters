@@ -1,0 +1,491 @@
+*{
+    box-sizing: border-box;
+}
+
+strong{
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SignPainter;
+    src: url(SignPainter.ttf);
+  }
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container-xl{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+    flex: 0 0 29.2361111%;
+    max-width: 29.2361111%;
+    margin-bottom: 35px;
+}
+
+.product-card__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    max-height: 100%;
+    height: 100%;
+}
+
+.product-card__inner a{
+    display: block;
+    width: 100%;
+    position: relative;
+    user-select: none;
+}
+
+.product-card__img{
+    padding: 0 17.25px;
+    overflow: hidden;
+    height: 371px;
+}
+
+.product-card__img img{
+    width: 100%;
+    transition: 1s all ease-in-out;
+    mix-blend-mode: darken;
+}
+
+.product-card__img svg{
+    transition: 1s all ease-in-out;
+}
+
+.rigt_corner_label{
+    position: absolute;
+    width: 113px;
+    height: 113px;
+    background-color: #EB2240;
+    border-radius: 50%;
+    right: 0;
+    top: -30px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31.5349px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 113px;
+}
+
+.product-card__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card__text h5{
+    margin: 40px 0 12px 0;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+}
+
+.product-card__text p{
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #4B4945;
+    opacity: .6;
+}
+
+.product-card__icons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.product-card__icons ul{
+    flex: 0 0 80%;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.product-card__icons li{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 12px;
+    align-items: center;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.product-card__icons li:nth-child(2){
+    white-space: nowrap;
+}
+
+.product-card__icons li:last-child{
+    padding-right: 0;
+}
+
+.product-card__icons li svg{
+    min-width: 24px;
+}
+
+.product-card__button{
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: transparent;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    background-color: transparent;
+    padding: 22px 0;
+    text-decoration: none;
+    transition: .7s all ease-in-out;
+}
+
+.product-card:hover .product-card__button{
+    background-color: #0E0B07;
+    transition: .7s all ease-in-out;
+    color: white;
+}
+
+.product-card:hover .product-card__img>svg, .product-card:hover .product-card__img>img{
+    transform: scale(1.1);
+    transition: 1s all ease-in-out;
+}
+
+.product-card__icons img{
+    max-width: 24px;
+}
+
+.main__title{
+    font-family: SignPainter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(8, 5, 1, 0.86);
+}
+
+.image-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 835px;
+}
+
+.image-section img:last-child{
+    display: none;
+}
+
+
+.scroll-down{
+    position: fixed;
+    top: 55%;
+    transform: rotate(-90deg);
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+    user-select: none;
+    transition: .5s all ease-in-out;
+}
+
+.scroll-down:hover{
+    cursor: pointer;
+    color: red;
+    transition: .5s all ease-in-out;
+}
+
+.social-networks{
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 100;
+}
+
+.social-networks a{
+    text-decoration: none;
+    display: block;
+    width: 24px;
+    height: 24px;   
+    transition: .2s all ease-in-out;
+}
+
+.social-networks a:nth-child(1){
+    -webkit-mask-image: url(twitter.png);
+    mask-image: url(twitter.png);
+    background-color: rgba(8, 5, 1);
+}
+
+.social-networks a:nth-child(2){
+    -webkit-mask-image: url(facebook.png);
+    mask-image: url(facebook.png);
+    background-color: rgba(8, 5, 1);
+}
+
+.social-networks a:nth-child(3){
+    -webkit-mask-image: url(instagram.png);
+    mask-image: url(instagram.png);
+    background-color: rgba(8, 5, 1);
+}
+
+.social-networks a:nth-child(4){
+    -webkit-mask-image: url(youtube.png);
+    mask-image: url(youtube.png);
+    background-color: rgba(8, 5, 1);
+}
+
+.social-networks a:hover{
+    background-color: red;
+    
+    transition: .2s all ease-in-out;
+}
+
+/* .shopify-product-form>input{
+    display: none;
+} */
+
+.page-404, .cart__empty{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.cart__empty{
+    justify-content: center;
+}
+
+.cart__empty a{
+    display: block;
+    padding: 22px 90px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s all ease-in-out;
+    border: 1px solid #EB2240;
+    background-color: #EB2240;
+    color: #fff;
+}
+
+.cart__empty a:hover{
+    background-color: #fff;
+    transition: .5s all ease-in-out;
+    color: #EB2240;
+}
+
+.page-404 h1, .cart__empty h2{
+    font-family: SignPainter;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 7vw;
+    line-height: 140%;
+    color: rgba(8, 5, 1);
+}
+
+.page-404 p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9vw;
+    line-height: 140%;
+    color: #EB2240;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.insta-link {
+    width: 48px;
+    height: 48px;
+}
+
+@media (max-width: 1600px) {
+    .social-networks, .scroll-down{
+        display: none;
+    }
+    
+    .product-template-page .scroll-down{
+        display: block;
+    }
+}
+
+@media (max-width: 1400px) {
+    .product-card__img{
+        height: 400px;
+    }
+
+
+}
+
+@media (max-width: 1300px) {
+    .product-card__img{
+        height: 370px;
+    }
+
+    .cart__empty a{
+        font-size: 12px;
+        padding: 16px 50px;
+    }
+}
+
+@media(max-width: 1200px){
+    .main__title{
+        font-size: 72px;
+    }
+
+    .product-card__img{
+        height: 350px;
+    }
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 300vh;
+        z-index: 20;
+        display: none;
+        background-color: transparent;
+        transition: .5s all ease-in-out;
+    }
+    
+    .overlay.active{
+        display: block;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: .5s all ease-in-out;
+    }
+
+    .overflow-hidden{
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1100px) {
+    .product-card__img{
+        height: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-card__img{
+        height: 270px;
+    }
+}
+
+@media(max-width: 850px){
+    .product-card__button{
+        background-color: #0E0B07;
+    }
+
+    .product-card{
+        margin-bottom: 50px;
+    }
+
+    .page-404 h1{
+        font-size: 15vw;
+    }
+
+    .cart__empty h2{
+        font-size: 15vw;
+    }
+
+    .page-404 p{
+        font-size: 2vw;
+    }
+    .mobile-only {
+        display: block;
+    }
+    .desktop-only {
+        display: none;
+    }
+    
+}
+
+
+@media(max-width: 600px){
+    .image-section img{
+        min-height: 327px;
+    }
+
+    .image-section img:last-child{
+        display: block;
+    }
+
+    .cart__empty h2{
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 450px){
+    .page-404 h1{
+        font-size: 20vw;
+    }
+
+    .cart__empty h2{
+        font-size: 17vw;
+    }
+
+    .page-404 p{
+        font-size: 3vw;
+    }
+
+    .cart__empty a{
+        font-size: 12px;
+        padding: 14px 40px;
+    }
+}
+
+@media(max-width: 370px){
+    .main__title{
+        font-size: 60px;
+    }
+}

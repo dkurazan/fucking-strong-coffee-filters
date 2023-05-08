@@ -1,0 +1,23 @@
+<div class="social-networks">
+    {% for link in section.settings.social-networks.links %}
+        <a href="{{ link.url }}" target="_blank"></a>
+    {% endfor %}
+</div>
+
+{% schema %}
+    {
+        "name": "Social networks",
+        "settings": [
+            {
+                "type": "link_list",
+                "id": "social-networks",
+                "label": "Social networks menu"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Social networks"
+            }
+        ]
+    }
+{% endschema %}

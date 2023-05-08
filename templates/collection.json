@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner-2",
+      "disabled": true,
+      "settings": {
+        "video_link": "",
+        "title-xl": "the good stuff..."
+      }
+    },
+    "template": {
+      "type": "template-collection",
+      "settings": {
+        "hide-product-subtitle": false,
+        "icnons-and-labels": 2
+      }
+    },
+    "image-section": {
+      "type": "image-section",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_7.png"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "bestsellers",
+        "title": "Our bestsellers",
+        "number_of_products_to_show": 3
+      }
+    }
+  },
+  "order": [
+    "image-banner",
+    "template",
+    "image-section",
+    "featured-collection"
+  ]
+}

@@ -1,0 +1,457 @@
+.collection{
+    padding: 59px 0 55px;
+}
+
+.collection__filter{
+    flex: 0 0 18.81944%;
+    max-width: 18.81944%;
+}
+
+.collection__products{
+    width: 100%;
+}
+
+.collection__products-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.collection .product-card__icons ul{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.collection .product-card__img{
+    height: 355px;
+    padding: 0;
+}
+
+.collection .product-card{
+    margin-bottom: 90px;
+}
+
+/* filter */
+
+.collection__filter-inner{
+    padding-right: 86px;
+}
+
+.filter__title, .filter-popup-title{
+    display: flex;
+}
+
+
+.filter__title h4, .filter-popup-title h4{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #EB2240;
+    margin-left: 4px;
+}
+
+.filter__block-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.filter__block-title:hover{
+    cursor: pointer;
+}
+
+.filter__block-title h6{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #333333;
+    user-select: none;
+}
+
+.filter__button{
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.filter__button span{
+    display: block;
+    width: 9px;
+    height: 1px;
+    background-color: rgba(108, 113, 117, 1);
+}
+
+.filter__button-closed{
+    position: relative;
+    left: -6px;
+}
+
+.filter__button:hover{
+    cursor: pointer;
+}
+
+
+
+.filter__checkbox{
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter__checkbox:last-child{
+    padding-bottom: 27px;
+}
+
+.filter__checkbox input{
+    display: none;
+}
+
+.filter__checkbox label, .filter__checkbox span{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #6C7175;
+}
+
+.filter__checkbox label:before{
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #E0E0E0;
+    margin-right: 8px;
+}
+
+.filter__checkbox input:checked + label:before{
+    background-image: url(checkbox-bg.svg);
+    background-position: center left 3px;
+    background-repeat: no-repeat;
+    background-color: #E0E0E0;
+}
+
+.filter__checkboxes{
+    border-bottom: 1px solid #ECE8DF;
+    margin-bottom: 27px;
+    display: block;
+}
+
+.filter__checkbox-hidden{
+    display: none;
+}
+
+.product__sort{
+    padding-bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sort-by:hover{
+    cursor: pointer;
+}
+
+.product-sort__inner span{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #979797;
+    padding-left: 15px;
+}
+
+.product-sort__inner select{
+    border: none;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #353535;
+    width: 7rem;
+    padding-right: 13px;
+    background: url('icon-dropdown-arrow.svg') no-repeat right center;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+}
+
+.product-sort__inner select:focus{
+    outline: none;
+}
+
+.product-sort__inner option{
+    border-color: transparent;
+}
+
+/* filter popup */
+
+
+.collection__pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.collection__pagination a{
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 14px 21.14px;
+    text-decoration: none;
+    background-color: #0E0B07;
+    transition: .7s all ease-in-out;
+    color: white;
+    margin-left: 10px;
+    border: 1px solid #0E0B07;
+}
+
+.collection__pagination a:hover{
+    background-color: transparent;
+    color: #0E0B07;
+    transition: .7s all ease-in-out;
+}
+
+.collection__pagination span {
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 14px 22.5px;
+    text-decoration: none;
+    border: 1px solid #0E0B07;
+    transition: .7s all ease-in-out;
+    color: #0E0B07;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.filter-popup-title, .filter__title span{
+    display: none;
+}
+
+.filter__apply-button{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    padding: 18px 0;
+    width: 100%;
+    color: #FFFFFF;
+    white-space: nowrap;
+    border: none;
+    background: #0E0B07;
+    margin-bottom: 30px;
+    border: 1px solid #0E0B07;
+    transition: .5s all ease-in-out;
+}
+
+.filter__apply-button:hover{
+    background-color: transparent;
+    color: #0E0B07;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+}
+
+@media (max-width:1450px) {
+    .collection{
+        padding: 59px 30px 55px;
+    }
+}
+
+@media (max-width:1400px) {
+    .collection__products-inner{
+        justify-content: space-around;
+    }
+}
+
+@media (max-width:1300px) {
+    .banner__content{
+        padding: 0 30px;
+    }
+}
+
+@media (max-width:1200px) {
+    
+    .filter__popup{
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        max-width: 100%;
+        width: 359px;
+        padding: 23px 16px 0 16px;
+        left: -100%;
+        transition: .5s all ease-in-out;
+        height: 100vh;
+        z-index: 30;
+        overflow: scroll;
+    }
+
+    .filter__title span {
+        display: inline;
+    }
+
+    .filter-popup-title{
+        display: flex;
+    }
+
+    .filter__popup.active{
+        left: 0;
+        transition: .5s all ease-in-out;
+    }
+
+    .filter__block-title{
+        padding-top: 30px;
+    }
+
+    .filter-popup-title{
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(236, 232, 223, 1);
+    }
+
+    .filter-popup-title>div{
+        display: flex;
+    }
+
+    .filter__popup .filter__title{
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ECE8DF;
+    }
+
+    .filter__popup .filter__block:last-child{
+        padding-bottom: 25px;
+    }
+
+
+    .filter__popup .filter__title>div{
+        display: flex;
+    }
+
+    .filter__popup .filter__title{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter__popup .filter__block{
+        max-width: 185px;
+    }
+
+    .filter__popup .collection__filter-inner{
+        padding: 0;
+    }
+    
+    .filter__apply-button{
+        font-size: 16px;
+        padding: 22px 103px;
+
+    }
+
+    #filter-open-button:hover, #filter-close-button:hover{
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .collection .product-card__img{
+        height: 400px;
+    }
+
+    .filter-form{
+        padding-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 1100px){
+    .collection .product-card__img {
+        height: 370px;
+    } 
+}
+
+@media (max-width: 1000px){
+    .collection .product-card__img {
+        height: 320px;
+    } 
+}
+
+@media (max-width: 900px){
+    .collection .product-card__img{
+        height: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .image-section img:last-child{
+        display: none;
+    }
+
+    .image-section img {
+        min-height: 621px;
+    }
+
+    .collection {
+        padding: 59px 15px 55px;
+    }
+
+    .collection__pagination span{
+        padding: 7px 16.5px;
+    }
+
+    .collection__pagination a{
+        padding: 7px 15.14px;
+    }
+   
+}
+
+@media (max-height: 500px ) {
+    .popup-mobile__nav-top{
+        overflow: scroll;
+        justify-content: start;
+    }
+}
+
+@media (max-width:400px){
+    .filter__popup{
+        width: 280px;
+    }
+
+    .filter__apply-button{
+        padding: 22px 0;
+        width: 100%;
+    }
+
+    div.banner__content h1{
+        font-size: 90px;
+    }
+}

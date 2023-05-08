@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "background-image": "shopify:\/\/shop_images\/Untitled_design_2.png",
+        "title-xl": "",
+        "title-sm": "",
+        "button-label-1": "shop",
+        "button-link-1": "shopify:\/\/collections\/all",
+        "button-label-2": "about",
+        "button-link-2": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "89ff0a29-22ff-42e7-8a01-eb3bfefcef1a": {
+      "type": "image-banner-analog",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "background-image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-21_at_2.37.43_PM.png",
+        "mobile-background-image": "shopify:\/\/shop_images\/Untitled_design.png",
+        "title-xl": "it's coffee.    not caviar.",
+        "button-label-1": "SHOP",
+        "button-link-1": "shopify:\/\/collections\/all-products",
+        "button-label-2": "ABOUT",
+        "button-link-2": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "bestsellers",
+        "title": "",
+        "number_of_products_to_show": 3
+      }
+    },
+    "our-story": {
+      "type": "our-story",
+      "settings": {
+        "title": "what grinds our gears",
+        "subtitle": "While we’ve made huge leaps in sourcing and roasting coffee over the years, monotonous branding and snobby attitudes still snarkily whisper the same thing: good coffee is for the few. Our response? Fuck that. We’re determined to share our beans and their story with anyone and everyone who likes good products made by good people. You can be a coffee nerd or novice and still agree on one thing: the grooviest of days starts with a Fucking Strong Coffee.",
+        "button-label": "read our story",
+        "button-link": "shopify:\/\/pages\/about-us"
+      }
+    },
+    "benefits": {
+      "type": "benefits",
+      "blocks": {
+        "371f12d1-f817-470e-acc3-7f24ad89ea10": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-21_at_3.39.23_PM.png",
+            "title": "SOURCIN'",
+            "subtitle": "Our coffee supply chain is short, traceable, and made up of folks who care about sustainability, smallholder farming, and top notch product."
+          }
+        },
+        "c993d799-10c9-4e63-8c3d-a1f856b83a3c": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-21_at_3.37.07_PM.png",
+            "title": "ROASTIN'",
+            "subtitle": "Our beans are specialty roasted in small batches in Amsterdam, so they’re always bright, flavorful, and smoother than a soul song."
+          }
+        },
+        "415acff4-3e08-499f-b474-8459da35f84d": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-04-21_at_3.41.57_PM.png",
+            "title": "SERVIN'",
+            "subtitle": "Ordering coffee should be a walk-in-the-park… we’ve built a following of friends n’ strangers by being approachable and reliable from click to cup."
+          }
+        }
+      },
+      "block_order": [
+        "371f12d1-f817-470e-acc3-7f24ad89ea10",
+        "c993d799-10c9-4e63-8c3d-a1f856b83a3c",
+        "415acff4-3e08-499f-b474-8459da35f84d"
+      ],
+      "settings": {
+        "title": "WHat we give a fuck about...",
+        "button-label": "Go to our coffee",
+        "collection": "coffee"
+      }
+    },
+    "last-added-product": {
+      "type": "last-added-product",
+      "blocks": {
+        "c7d40584-72c9-44f7-aad3-3d8764633257": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "afdaf59a-e72f-4031-8204-a5b99215695f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mountains_1.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "30024cbf-a4b9-45f6-ae57-33e98ec2d594": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tasty_1.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        }
+      },
+      "block_order": [
+        "c7d40584-72c9-44f7-aad3-3d8764633257",
+        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122",
+        "afdaf59a-e72f-4031-8204-a5b99215695f",
+        "30024cbf-a4b9-45f6-ae57-33e98ec2d594"
+      ],
+      "settings": {
+        "collection": "home-page-top-product"
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "disabled": true,
+      "blocks": {
+        "e15aaff5-2390-4afc-8fe1-816034e9ce55": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review-icon.png",
+            "rating": 4,
+            "review-title": "Amazing coffee!",
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "author-name": "Name Surname"
+          }
+        },
+        "3cc2f54f-ca20-4536-95bf-f60027c21fbe": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review-icon.png",
+            "rating": 4,
+            "review-title": "Amazing coffee!",
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "author-name": "Name Surname"
+          }
+        },
+        "c6edc363-5fa3-4378-bead-e244ac007e60": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review-icon.png",
+            "rating": 4,
+            "review-title": "Amazing coffee!",
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "author-name": "Name Surname"
+          }
+        }
+      },
+      "block_order": [
+        "e15aaff5-2390-4afc-8fe1-816034e9ce55",
+        "3cc2f54f-ca20-4536-95bf-f60027c21fbe",
+        "c6edc363-5fa3-4378-bead-e244ac007e60"
+      ],
+      "settings": {
+        "title": "SOME OF OUR FRIENDS"
+      }
+    },
+    "featured-collection-2": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "shop-merchandise-essentials",
+        "title": "",
+        "number_of_products_to_show": 3
+      }
+    },
+    "image-section": {
+      "type": "image-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/kilo_cody_4_website.jpg"
+      }
+    },
+    "afce2298-9911-4eca-935e-bfbb7cb7bab4": {
+      "type": "image-section",
+      "disabled": true,
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image-banner",
+    "89ff0a29-22ff-42e7-8a01-eb3bfefcef1a",
+    "featured-collection",
+    "our-story",
+    "benefits",
+    "last-added-product",
+    "reviews",
+    "featured-collection-2",
+    "image-section",
+    "afce2298-9911-4eca-935e-bfbb7cb7bab4"
+  ]
+}
